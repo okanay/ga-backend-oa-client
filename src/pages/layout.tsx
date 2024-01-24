@@ -2,8 +2,7 @@ import { Outlet } from "react-router-dom";
 
 export const AppLayout = () => {
   return (
-    <div className={""}>
-      App Layout
+    <div className={"font-plexSans"}>
       <Outlet />
     </div>
   );
