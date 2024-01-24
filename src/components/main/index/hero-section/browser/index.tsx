@@ -4,7 +4,7 @@ import { SearchbarShell } from "@/components/main/index/hero-section/browser/sea
 
 export const Browser = () => {
   return (
-    <div className="absolute inset-0 z-10 mx-auto flex w-full max-w-6xl items-start justify-center rounded-b-xl">
+    <div className="absolute inset-0 z-10 mx-auto hidden w-full max-w-6xl items-start justify-center rounded-b-xl sm:flex">
       <div className="relative my-4 mt-[8.1rem] flex w-full flex-col justify-start rounded-b-xl px-4">
         <div className="relative flex w-full flex-col justify-start overflow-hidden rounded-b-xl rounded-t-xl border-t border-flower-200/75">
           <div className="flex h-[2.75rem] w-full items-center justify-start rounded-b-xl rounded-t-xl bg-flower-50 pr-1 pt-1">
