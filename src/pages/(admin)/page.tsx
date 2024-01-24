@@ -1,3 +1,3 @@
 export const AdminPage = () => {
-  return;
+  return <>...</>;
 };
