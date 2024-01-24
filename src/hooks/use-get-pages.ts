@@ -2,7 +2,7 @@ import { useState } from "react";
 import { dummyPages } from "@/components/main/index/hero-section/browser/pages-tabs/data.ts";
 
 export const useGetPages = () => {
-  const [pageCount, setPageCount] = useState(dummyPages.length - 1);
+  const [pageCount, setPageCount] = useState(2);
   const [pages, setPages] = useState(dummyPages.slice(0, pageCount));
   const [selectedPageIndex, setSelectedPageIndex] = useState(0);
 

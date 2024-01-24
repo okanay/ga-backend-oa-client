@@ -8,7 +8,7 @@ export const Header = () => {
           <Link to={"/"}>
             <span className="font-plexSansSerif text-4xl">Grow Pusher</span>
           </Link>
-          <ul className="hidden items-center justify-end gap-12 sm:flex">
+          <ul className="hidden items-center justify-end gap-12 text-lg sm:flex">
             <li>
               <Link to={"#faq"}>
                 <span>F.A.Q</span>

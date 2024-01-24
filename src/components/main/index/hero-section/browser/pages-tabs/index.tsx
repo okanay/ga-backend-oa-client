@@ -2,6 +2,8 @@ import { SelectedPage } from "@/components/main/index/hero-section/browser/pages
 import { UnSelectedPage } from "@/components/main/index/hero-section/browser/pages-tabs/pages-un-selected.tsx";
 import { useGetPages } from "@/hooks/use-get-pages.ts";
 import { AddNewPageButton } from "@/components/main/index/hero-section/browser/pages-tabs/add-new-page-button.tsx";
+import { useEffect } from "react";
+import { useSelectedPage } from "@/hooks/use-selected-page.tsx";
 
 export const PagesTabs = () => {
   const {
@@ -11,6 +13,12 @@ export const PagesTabs = () => {
     handlePageAdd,
     setSelectedPageIndex,
   } = useGetPages();
+
+  const { setSelectedIndex } = useSelectedPage();
+
+  useEffect(() => {
+    setSelectedIndex(selectedPageIndex);
+  }, [selectedPageIndex, setSelectedIndex]);
 
   return (
     <div
