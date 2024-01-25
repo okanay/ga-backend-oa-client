@@ -1,5 +1,5 @@
 import { AnimatePresence, m } from "framer-motion";
-import { dummyPages } from "../../browser/pages-tabs/data.ts";
+import { dummyPages } from "../../browser/data.ts";
 
 import { useSelectedPageIndex } from "@/hooks/browser-hooks/use-selected-page-index.tsx";
 
