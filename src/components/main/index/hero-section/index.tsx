@@ -1,6 +1,6 @@
-import { Browser } from "@/components/main/index/hero-section/browser";
-import { GettingStart } from "@/components/main/index/hero-section/getting-start";
-import { ArrowAnimation } from "@/components/main/index/hero-section/arrow-animation";
+import { Browser } from "./browser";
+import { GettingStart } from "./getting-start";
+import { ArrowAnimation } from "./arrow-animation";
 
 export const HeroSection = () => {
   return (

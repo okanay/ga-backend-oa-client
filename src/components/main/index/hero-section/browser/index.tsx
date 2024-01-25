@@ -1,6 +1,6 @@
-import { MacosColorDots } from "@/components/main/index/hero-section/browser/macos-color-dots";
-import { PagesTabs } from "@/components/main/index/hero-section/browser/pages-tabs";
-import { SearchbarShell } from "@/components/main/index/hero-section/browser/searchbar-shell";
+import { MacosColorDots } from "./macos-color-dots";
+import { PagesTabs } from "./pages-tabs";
+import { SearchbarShell } from "./searchbar-shell";
 
 export const Browser = () => {
   return (

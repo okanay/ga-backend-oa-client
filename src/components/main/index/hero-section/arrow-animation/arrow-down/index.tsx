@@ -1,19 +1,20 @@
-import { useSelectedPage } from "@/hooks/use-selected-page.tsx";
 import { AnimatePresence, m } from "framer-motion";
-import { dummyPages } from "@/components/main/index/hero-section/browser/pages-tabs/data.ts";
+import { dummyPages } from "../../browser/pages-tabs/data.ts";
 
-export const ArrowDownAnimationWrapper = ({
-  children,
-}: {
+import { useSelectedPageIndex } from "@/hooks/browser-hooks/use-selected-page-index.tsx";
+
+type Props = React.FC<{
   children: React.ReactNode;
-}) => {
-  const { selectedIndex } = useSelectedPage();
-  const type = dummyPages[selectedIndex].type;
+}>;
+
+export const ArrowDownAnimationWrapper: Props = ({ children }) => {
+  const { selectedIndex } = useSelectedPageIndex();
+  const animationType = dummyPages[selectedIndex].type;
 
   return (
     <div className={"flex items-center justify-center text-xs"}>
       <AnimatePresence mode={"popLayout"}>
-        {type === "bad" && (
+        {animationType === "bad" && (
           <m.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -24,36 +25,5 @@ export const ArrowDownAnimationWrapper = ({
         )}
       </AnimatePresence>
     </div>
-  );
-};
-
-export const ArrowDown = () => {
-  return (
-    <m.div
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        repeat: Infinity,
-        duration: Math.random() * 4 + 1.5,
-        repeatDelay: Math.random() * 1.25,
-        delay: Math.random() * 3.5,
-        repeatType: "reverse",
-      }}
-    >
-      <img
-        src={"/arrow-down.svg"}
-        loading={"lazy"}
-        alt={"hero-icon-arrow-up"}
-        className={"relative opacity-85"}
-        style={{
-          //prettier-ignore
-          width: `calc(clamp(${Math.floor(Math.random() * 80)}px, 1.5vw, 40px) * 0.5)`,
-          //prettier-ignore
-          height: `calc(clamp(${Math.floor(Math.random() * 80)}px, 2.5vw, 40px) * 0.5)`,
-          right: `${Math.floor(Math.random() * 75)}px`,
-          top: `${Math.floor(Math.random() * 25)}px`,
-        }}
-      />
-    </m.div>
   );
 };

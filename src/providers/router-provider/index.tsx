@@ -1,9 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import AdminPages from "./(admin)";
-import MainPages from "./(main)";
 import { NotFound } from "@/pages/not-found.tsx";
 import { AppLayout } from "@/pages/layout.tsx";
+
+import AdminPages from "./(admin)";
+import MainPages from "./(main)";
 
 const router = createBrowserRouter([
   {

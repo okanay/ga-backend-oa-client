@@ -1,33 +1,29 @@
-import {
-  ArrowDown,
-  ArrowDownAnimationWrapper,
-} from "@/components/main/index/hero-section/arrow-animation/arrow-down";
-import {
-  ArrowUp,
-  ArrowUpAnimationWrapper,
-} from "@/components/main/index/hero-section/arrow-animation/arrow-up";
+import { ArrowDownAnimationWrapper } from "./arrow-down";
+import { ArrowDown } from "./arrow-down/animation";
+
+import { ArrowUpAnimationWrapper } from "./arrow-up";
+import { ArrowUp } from "./arrow-up/animation.tsx";
+
+import { GridCols12 } from "./grid-cols-12";
+import { GridRows12 } from "./grid-rows-12";
 
 export const ArrowAnimation = () => {
   return (
     <div className={"absolute inset-0 overflow-hidden"}>
       <div className="grid h-full grid-cols-12 gap-4">
-        {Array.from({ length: 12 }).map((_, columnIndex) => (
-          <div
-            key={`column-${columnIndex}`}
-            className="grid h-full grid-rows-12 gap-4"
-          >
-            {Array.from({ length: 12 }).map((_, rowIndex) => (
-              <>
-                <ArrowDownAnimationWrapper>
-                  <ArrowDown key={`row-${rowIndex}-down`} />
-                </ArrowDownAnimationWrapper>
-                <ArrowUpAnimationWrapper>
-                  <ArrowUp key={`row-${rowIndex}-up`} />
-                </ArrowUpAnimationWrapper>
-              </>
-            ))}
-          </div>
-        ))}
+        <GridCols12>
+          <GridRows12>
+            <>
+              <ArrowUpAnimationWrapper>
+                <ArrowUp />
+              </ArrowUpAnimationWrapper>
+
+              <ArrowDownAnimationWrapper>
+                <ArrowDown />
+              </ArrowDownAnimationWrapper>
+            </>
+          </GridRows12>
+        </GridCols12>
       </div>
     </div>
   );

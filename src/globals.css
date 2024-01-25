@@ -1,5 +1,8 @@
+/* IMPROVE FONT OPTIMIZATION */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap');
+
+/* LENIS */
 @import "./assets/styles/lenis-requirement.css";
 
 @tailwind base;
@@ -47,7 +50,7 @@
     --flower-50: 237 239 255;
     --flower-100: 223 224 255;
     --flower-200: 197 199 255;
-    --flower-300: [168 168 255];
+    --flower-300: 168 168 255;
     --flower-400: 135 125 252;
     --flower-500: 117 94 246;
     --flower-600: 103 65 234;
@@ -56,11 +59,7 @@
     --flower-900: 61 43 132;
     --flower-950: 38 25 77;
   }
-  .dark {}
 
-  .rotate-browser {
-    /*transform:*/
-    /*rotate3d(-270, -60, -25, 45deg);*/
-  }
+  .dark {}
 }
 

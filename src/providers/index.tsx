@@ -4,7 +4,7 @@ import { FramerProvider } from "@/providers/framer-provider";
 import { JotaiProvider } from "@/providers/jotai-provider";
 import { LenisProvider } from "@/providers/lenis-provider";
 
-export const Providers = () => {
+export const AppProviders = () => {
   return (
     <>
       <JotaiProvider>

@@ -1,7 +1,7 @@
-import { GetStartedBtn } from "@/components/main/index/hero-section/getting-start/get-started-btn.tsx";
-import { LearnMoreBtn } from "@/components/main/index/hero-section/getting-start/learn-more-btn.tsx";
-import { Description } from "@/components/main/index/hero-section/getting-start/description.tsx";
-import { Title } from "@/components/main/index/hero-section/getting-start/title.tsx";
+import { GetStartedBtn } from "./get-started-btn.tsx";
+import { LearnMoreBtn } from "./learn-more-btn.tsx";
+import { Description } from "./description.tsx";
+import { Title } from "./title.tsx";
 
 export const GettingStart = () => {
   return (

@@ -1,8 +1,8 @@
-type NewPageButtonProps = React.FC<{
-  handlePageAdd: () => void;
-}>;
+import { useBrowserValue } from "@/hooks/browser-hooks/use-browser-value.ts";
 
-export const AddNewPageButton: NewPageButtonProps = ({ handlePageAdd }) => {
+export const AddNewPageButton = () => {
+  const { handlePageAdd } = useBrowserValue();
+
   return (
     <div
       className={"flex h-full translate-y-[-5%] items-center justify-center"}

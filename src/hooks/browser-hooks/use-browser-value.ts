@@ -1,18 +1,19 @@
-import { useState } from "react";
-import { dummyPages } from "@/components/main/index/hero-section/browser/pages-tabs/data.ts";
+import { usePagesCount } from "@/hooks/browser-hooks/use-pages-count.tsx";
+import { usePages } from "@/hooks/browser-hooks/use-pages.tsx";
+import { useSelectedPageIndex } from "@/hooks/browser-hooks/use-selected-page-index.tsx";
 
-export const useGetPages = () => {
-  const [pageCount, setPageCount] = useState(2);
-  const [pages, setPages] = useState(dummyPages.slice(0, pageCount));
-  const [selectedPageIndex, setSelectedPageIndex] = useState(0);
+export const useBrowserValue = () => {
+  const { pages, setPages, dummyPages } = usePages();
+  const { pagesCount, setPagesCount } = usePagesCount();
+  const { selectedIndex, setSelectedIndex } = useSelectedPageIndex();
 
   const handlePageClose = (index: number) => {
     const newPages = pages.filter((page) => page.index !== index);
     setPages(newPages);
-    setPageCount(pageCount - 1);
+    setPagesCount(pagesCount - 1);
 
-    if (selectedPageIndex === index && newPages.length > 0) {
-      setSelectedPageIndex(newPages[newPages.length - 1].index);
+    if (selectedIndex === index && newPages.length > 0) {
+      setSelectedIndex(newPages[newPages.length - 1].index);
     }
   };
 
@@ -32,15 +33,15 @@ export const useGetPages = () => {
     const newPage = { ...dummyPages[randomId] };
 
     setPages([...pages, newPage]);
-    setPageCount(pageCount + 1);
-    setSelectedPageIndex(dummyPages[randomId].index);
+    setPagesCount(pagesCount + 1);
+    setSelectedIndex(dummyPages[randomId].index);
   };
 
   return {
     pages,
-    selectedPageIndex,
+    selectedIndex,
+    setSelectedIndex,
     handlePageClose,
     handlePageAdd,
-    setSelectedPageIndex,
   };
 };
