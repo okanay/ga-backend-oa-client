@@ -23,8 +23,8 @@ export const ArrowDown = () => {
         style={{
           width: getMaxWidth(),
           height: getMaxHeight(),
-          right: `${Math.floor(Math.random() * -25)}px`,
-          left: `${Math.floor(Math.random() * 45)}px`,
+          right: `${Math.floor(Math.random() * -75)}px`,
+          left: `${Math.floor(Math.random() * 75)}px`,
           top: `${Math.floor(Math.random() * 25)}px`,
         }}
       />
