@@ -1,4 +1,6 @@
 import { m } from "framer-motion";
+import { getMaxWidth } from "../random-values.ts";
+import { getMaxHeight } from "../random-values.ts";
 
 export const ArrowUp = () => {
   return (
@@ -7,9 +9,9 @@ export const ArrowUp = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{
         repeat: Infinity,
-        duration: Math.random() * 4 + 1.5,
-        repeatDelay: Math.random() * 1.25,
-        delay: Math.random() * 3.5,
+        duration: Math.random() * 4 + 1.75,
+        repeatDelay: Math.random() * 2,
+        delay: Math.random() * 12,
         repeatType: "reverse",
       }}
     >
@@ -19,12 +21,11 @@ export const ArrowUp = () => {
         alt={"hero-icon-arrow-up"}
         className={"relative opacity-85"}
         style={{
-          //prettier-ignore
-          width: `calc(clamp(${Math.floor(Math.random() * 80)}px, 1.5vw, 40px) * 0.5)`,
-          //prettier-ignore
-          height: `calc(clamp(${Math.floor(Math.random() * 80)}px, 2.5vw, 40px) * 0.5)`,
-          left: `${Math.floor(Math.random() * 75)}px`,
-          bottom: `${Math.floor(Math.random() * 25)}px`,
+          width: getMaxWidth(),
+          height: getMaxHeight(),
+          right: `${Math.floor(Math.random() * -25)}px`,
+          left: `${Math.floor(Math.random() * 45)}px`,
+          top: `${Math.floor(Math.random() * 25)}px`,
         }}
       />
     </m.div>

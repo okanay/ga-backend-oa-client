@@ -1,5 +1,5 @@
 import { atom, useAtom } from "jotai";
-import { dummyPages } from "@/components/main/index/hero-section/browser/data.ts";
+import { dummyPages } from "@/constants/main-index/browser/data.ts";
 
 export const pagesAtom = atom(dummyPages.slice(0, 2));
 

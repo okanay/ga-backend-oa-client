@@ -1,4 +1,4 @@
-import { dummyPages } from "../data.ts";
+import { dummyPages } from "../../../../../../constants/main-index/browser/data.ts";
 
 import { useSelectedPageIndex } from "@/hooks/browser-hooks/use-selected-page-index.tsx";
 import { DummyDot } from "./dummy-dot.tsx";
