@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mantine/core": "^7.4.2",
+    "@mantine/hooks": "^7.4.2",
     "@studio-freight/react-lenis": "^0.0.43",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
