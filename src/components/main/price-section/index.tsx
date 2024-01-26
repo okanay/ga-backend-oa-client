@@ -5,7 +5,6 @@ import { useMediaQuery } from "@mantine/hooks";
 export const PriceSection = () => {
   //mantine hooks
   const isMatch = useMediaQuery("(max-width: 640px)");
-  console.log(isMatch);
 
   // framer-motion
   const sectionRef = useRef<HTMLElement>(null);
@@ -15,7 +14,6 @@ export const PriceSection = () => {
   });
 
   // card animation on scroll
-  // prettier-ignore
   const clipTemplateValue = isMatch ? 0.58 : 0.76;
   // prettier-ignore
   const clipTop = useTransform(scrollYProgress, [0, clipTemplateValue, 0.9], [100, 100, 0]);
@@ -82,7 +80,7 @@ export const PriceSection = () => {
             </ul>
 
             {/*Card Button*/}
-            <button className="h-[2.5rem] w-full rounded-lg border border-secondary-950/10 bg-secondary-700 text-base tracking-widest text-ebony-50 sm:h-[3.75rem] sm:text-xl">
+            <button className="h-[2.5rem] w-full rounded-lg border border-secondary-950/10 bg-secondary-700 text-base tracking-widest text-ebony-50 transition-colors duration-300 hover:bg-secondary-600 sm:h-[3.75rem] sm:text-xl">
               Start Now
             </button>
           </div>
