@@ -11,8 +11,7 @@ export const PriceSection = () => {
 
   // card animation on scroll
   // prettier-ignore
-  const opacity = useTransform(scrollYProgress, [0, 0.65, 0.9], [0, 0, 1]);
-  const clipTop = useTransform(scrollYProgress, [0, 0.65, 0.95], [100, 100, 0]);
+  const clipTop = useTransform(scrollYProgress, [0, 0.63, 0.90], [100, 100, 0]);
   const clipTemplate = useMotionTemplate`inset(0% 0% ${clipTop}% 0%)`;
 
   // circle animation on scroll
@@ -27,13 +26,13 @@ export const PriceSection = () => {
       className="relative flex h-fit min-h-[844px] flex-col justify-center overflow-hidden bg-flower-50 py-16 sm:h-full sm:min-h-0 sm:py-24"
     >
       {/*Contents*/}
-      <div className="flex flex-col items-center justify-center space-y-12">
+      <div className="flex flex-col items-center justify-center space-y-8 px-4 sm:space-y-16">
         {/*Price Section Header*/}
-        <div className="flex w-full flex-col items-center justify-center space-y-8 text-center sm:space-y-12">
+        <div className="flex w-full flex-col items-center justify-center space-y-8 text-center sm:space-y-16">
           <h4 className="text-balance text-center font-plexSansSerif text-3xl text-secondary-950 base-phone:text-4xl sm:text-6xl sm:leading-[3.75rem] lg:max-w-[42.5rem] lg:text-7xl lg:leading-[4.75rem]">
             Unlimited Access One Time Payment
           </h4>
-          <h5 className="text-balance text-center text-sm leading-5 tracking-wider text-secondary-800 base-phone:text-sm sm:text-xl sm:leading-[1.4rem] lg:max-w-[55rem] lg:text-2xl lg:leading-[1.85rem]">
+          <h5 className="max-w-[340px] text-balance text-center text-sm leading-5 tracking-wider text-secondary-800 base-phone:text-sm sm:max-w-[560px] sm:text-xl sm:leading-[1.4rem] lg:max-w-[55rem] lg:text-2xl lg:leading-[1.85rem]">
             With our one-time payment plan, you can save money and time on your
             website's indexation. Get started today and see the difference!
           </h5>
@@ -41,13 +40,10 @@ export const PriceSection = () => {
 
         {/*Card*/}
         <m.div
-          className={`relative z-30 rounded-lg border-2 bg-secondary-50 sm:min-h-[30rem] sm:w-[22rem] sm:scale-[108%] sm:border-2
+          className={`relative z-30 rounded-lg border-2 bg-secondary-50 sm:min-h-[30rem] sm:w-[22rem] sm:border-2
           sm:border-secondary-700
           `}
-          style={{
-            opacity,
-            clipPath: clipTemplate,
-          }}
+          style={{ clipPath: clipTemplate }}
         >
           {/* Card Items*/}
           <div className="flex h-full w-full flex-col justify-between space-y-12 px-12 py-12">
@@ -92,7 +88,7 @@ export const PriceSection = () => {
 
       {/* Bottom Circle*/}
       <m.div
-        className="absolute bottom-0 left-0 z-20 h-[22rem] w-full bg-secondary-700 sm:block"
+        className="absolute bottom-0 left-0 z-20 h-[18rem] w-full bg-secondary-700 sm:block sm:h-[28rem]"
         style={{
           borderTopLeftRadius: radius,
           borderTopRightRadius: radius,
