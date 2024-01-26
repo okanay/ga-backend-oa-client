@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
+import { m, useScroll, useTransform } from "framer-motion";
 
 export const Header = () => {
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 0.9, 1], ["-100", "-100%", "0%"]);
+
   return (
     <header className="fixed top-0 z-[999] h-fit w-full">
-      <div className="mx-auto max-w-7xl">
+      <m.div
+        style={{ y }}
+        className="absolute top-0 h-full w-full bg-secondary-950"
+      />
+      <div className="relative z-20 mx-auto max-w-7xl">
         <nav className="flex items-center justify-between px-4 py-4">
           <Link to={"/"}>
             <span className="font-plexSansSerif text-4xl">Grow Pusher</span>
