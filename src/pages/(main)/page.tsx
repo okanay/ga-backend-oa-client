@@ -6,6 +6,7 @@ export const MainPage = () => {
     <main className={"bg-flower-50"}>
       <HeroSection />
       <PriceSection />
+      <div className={"h-[500px] w-full bg-ebony-950"}></div>
     </main>
   );
 };
