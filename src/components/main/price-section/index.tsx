@@ -24,19 +24,16 @@ export const PriceSection = () => {
   return (
     <section
       ref={sectionRef}
-      className={"relative h-fit overflow-hidden bg-flower-50 py-24"}
+      className="relative flex h-fit flex-col justify-center overflow-hidden bg-flower-50 py-12 sm:h-full sm:py-24"
     >
-      <div className={"flex flex-col items-center justify-center space-y-12"}>
-        {/*About Price*/}
-        <div
-          className={
-            "flex w-full flex-col items-center justify-center space-y-12 text-center"
-          }
-        >
-          <h4 className="text-balance text-center font-plexSansSerif text-4xl text-secondary-950 sm:text-6xl sm:leading-[3.75rem] lg:max-w-[42.5rem] lg:text-7xl lg:leading-[4.75rem]">
+      {/*Contents*/}
+      <div className="flex flex-col items-center justify-center space-y-12">
+        {/*Price Section Header*/}
+        <div className="flex w-full flex-col items-center justify-center space-y-8 text-center sm:space-y-12">
+          <h4 className="text-balance text-center font-plexSansSerif text-3xl text-secondary-950 base-phone:text-4xl sm:text-6xl sm:leading-[3.75rem] lg:max-w-[42.5rem] lg:text-7xl lg:leading-[4.75rem]">
             Unlimited Access One Time Payment
           </h4>
-          <h5 className="text-balance text-center text-sm tracking-wider text-secondary-800 sm:text-xl sm:leading-[1.4rem] lg:max-w-[55rem] lg:text-2xl lg:leading-[1.85rem]">
+          <h5 className="text-balance text-center text-sm leading-5 tracking-wider text-secondary-800 base-phone:text-sm sm:text-xl sm:leading-[1.4rem] lg:max-w-[55rem] lg:text-2xl lg:leading-[1.85rem]">
             With our one-time payment plan, you can save money and time on your
             website's indexation. Get started today and see the difference!
           </h5>
@@ -44,30 +41,31 @@ export const PriceSection = () => {
 
         {/*Card*/}
         <m.div
-          className={`relative z-30 h-[30rem] w-[22rem] space-y-6 rounded-lg 
-          border-2 border-secondary-950/10 bg-flower-50 px-12 py-12 
-          shadow shadow-flower-950/10 sm:border-secondary-700`}
+          className={`relative z-30 rounded-lg border-2 bg-secondary-50 sm:min-h-[30rem] sm:w-[22rem] sm:scale-[108%] sm:border-2
+          sm:border-secondary-700
+          `}
           style={{
             opacity,
             clipPath: clipTemplate,
           }}
         >
-          <div className={"flex h-full w-full flex-col justify-between"}>
+          {/* Card Items*/}
+          <div className="flex h-full w-full flex-col justify-between space-y-12 px-12 py-12">
             {/*Card Top*/}
             <div>
-              <h6 className="text-lg font-bold tracking-wide text-ebony-950">
+              <h6 className="text-base font-bold tracking-wide text-ebony-950 sm:text-lg">
                 One Time
               </h6>
-              <h5 className="mb-6 text-base tracking-wide text-ebony-950/50">
+              <h5 className="-mt-1 text-xs tracking-wide text-ebony-950/50 sm:text-base">
                 Per Website
               </h5>
-              <h5 className="text-4xl font-bold tracking-wide text-ebony-950">
+              <h5 className="mt-4 text-3xl font-bold tracking-wide text-ebony-950 sm:text-4xl">
                 $20
               </h5>
             </div>
 
             {/*Card List*/}
-            <ul className="space-y-2 text-sm text-ebony-950">
+            <ul className="space-y-2 text-xs text-ebony-950 sm:text-sm">
               <li className="relative flex items-center justify-start gap-2">
                 <CheckIcon />
                 <span>Unlimited Access</span>
@@ -84,7 +82,7 @@ export const PriceSection = () => {
 
             {/*Card Button*/}
             <div className="w-full">
-              <button className="h-[3.75rem] w-full rounded-lg border border-secondary-950/10 bg-secondary-700 text-xl tracking-widest text-flower-50">
+              <button className="h-[2.5rem] w-full rounded-lg border border-secondary-950/10 bg-secondary-700 text-base tracking-widest text-ebony-50 sm:h-[3.75rem] sm:text-xl">
                 Start Now
               </button>
             </div>
@@ -92,6 +90,7 @@ export const PriceSection = () => {
         </m.div>
       </div>
 
+      {/* Bottom Circle*/}
       <m.div
         className="absolute bottom-0 left-0 z-20 hidden h-[22rem] w-full bg-secondary-700 sm:block"
         style={{
