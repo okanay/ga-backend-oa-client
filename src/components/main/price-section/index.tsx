@@ -11,8 +11,8 @@ export const PriceSection = () => {
 
   // card animation on scroll
   // prettier-ignore
-  const opacity = useTransform(scrollYProgress, [0, 0.73, 0.9], [0, 0.9, 1]);
-  const clipTop = useTransform(scrollYProgress, [0, 0.62, 1], [100, 100, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.65, 0.9], [0, 0, 1]);
+  const clipTop = useTransform(scrollYProgress, [0, 0.65, 0.95], [100, 100, 0]);
   const clipTemplate = useMotionTemplate`inset(0% 0% ${clipTop}% 0%)`;
 
   // circle animation on scroll
@@ -24,7 +24,7 @@ export const PriceSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative flex h-fit flex-col justify-center overflow-hidden bg-flower-50 py-12 sm:h-full sm:py-24"
+      className="relative flex h-fit flex-col justify-center overflow-hidden bg-flower-50 py-16 sm:h-full sm:py-24"
     >
       {/*Contents*/}
       <div className="flex flex-col items-center justify-center space-y-12">
@@ -92,7 +92,7 @@ export const PriceSection = () => {
 
       {/* Bottom Circle*/}
       <m.div
-        className="absolute bottom-0 left-0 z-20 hidden h-[22rem] w-full bg-secondary-700 sm:block"
+        className="absolute bottom-0 left-0 z-20 h-[22rem] w-full bg-secondary-700 sm:block"
         style={{
           borderTopLeftRadius: radius,
           borderTopRightRadius: radius,
