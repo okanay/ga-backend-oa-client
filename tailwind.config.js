@@ -29,7 +29,7 @@ module.exports = {
       screens: {
         "xs-phone": "320px",
         "sm-phone": "360px",
-        "base-phone": "400px",
+        "base-phone": "390px",
         "lg-phone": "440px",
         "xl-phone": "480px",
       },

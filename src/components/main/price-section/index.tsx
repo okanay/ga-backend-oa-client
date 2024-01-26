@@ -1,7 +1,12 @@
 import { m, useMotionTemplate, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useMediaQuery } from "@mantine/hooks";
 
 export const PriceSection = () => {
+  //mantine hooks
+  const isMatch = useMediaQuery("(max-width: 640px)");
+  console.log(isMatch);
+
   // framer-motion
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -11,7 +16,9 @@ export const PriceSection = () => {
 
   // card animation on scroll
   // prettier-ignore
-  const clipTop = useTransform(scrollYProgress, [0, 0.63, 0.90], [100, 100, 0]);
+  const clipTemplateValue = isMatch ? 0.58 : 0.76;
+  // prettier-ignore
+  const clipTop = useTransform(scrollYProgress, [0, clipTemplateValue, 0.9], [100, 100, 0]);
   const clipTemplate = useMotionTemplate`inset(0% 0% ${clipTop}% 0%)`;
 
   // circle animation on scroll
@@ -44,7 +51,7 @@ export const PriceSection = () => {
           style={{ clipPath: clipTemplate }}
         >
           {/* Card Items*/}
-          <div className="flex h-full w-full flex-col justify-between space-y-12 px-12 py-12">
+          <div className="flex w-full flex-col justify-between space-y-12 px-12 py-12 sm:min-h-[30rem]">
             {/*Card Top*/}
             <div>
               <h6 className="text-base font-bold tracking-wide text-ebony-950 sm:text-lg">
@@ -75,11 +82,9 @@ export const PriceSection = () => {
             </ul>
 
             {/*Card Button*/}
-            <div className="w-full">
-              <button className="h-[2.5rem] w-full rounded-lg border border-secondary-950/10 bg-secondary-700 text-base tracking-widest text-ebony-50 sm:h-[3.75rem] sm:text-xl">
-                Start Now
-              </button>
-            </div>
+            <button className="h-[2.5rem] w-full rounded-lg border border-secondary-950/10 bg-secondary-700 text-base tracking-widest text-ebony-50 sm:h-[3.75rem] sm:text-xl">
+              Start Now
+            </button>
           </div>
         </m.div>
       </div>
