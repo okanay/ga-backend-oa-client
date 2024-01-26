@@ -17,9 +17,14 @@ export const PriceSection = () => {
 
   // card animation on scroll
   // prettier-ignore
-  const cardY = useTransform(scrollYProgress, [0, 0.99], ["100%", "-1.25%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.73, 0.9], [0, 0.9, 1]);
+  const cardY = useTransform(
+    scrollYProgress,
+    [0, 0.9, 1],
+    ["-7%", "-7%", "2.5%"]
+  );
+  const clipTop = useTransform(scrollYProgress, [0, 0.73, 1], [100, 100, 0]);
 
-  const clipTop = useTransform(scrollYProgress, [0.5, 0.96], [200, 0]);
   const clipTemplate = useMotionTemplate`inset(0% 0% ${clipTop}% 0%)`;
 
   return (
@@ -109,6 +114,7 @@ export const PriceSection = () => {
             <m.div
               style={{
                 y: cardY,
+                opacity,
                 clipPath: clipTemplate,
               }}
               className="relative z-30 mt-8 hidden h-full max-h-[480px] w-full max-w-[340px] overflow-hidden rounded-lg border-2 border-secondary-950/10 bg-flower-50 shadow shadow-flower-950/10 sm:block sm:border-secondary-700"

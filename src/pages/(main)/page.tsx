@@ -9,7 +9,7 @@ export const MainPage = () => {
     target: sectionsRef,
     offset: ["start end", "end end"],
   });
-  const x = useTransform(scrollYProgress, [0, 0.525, 1], ["0%", "0%", "-100%"]);
+  const x = useTransform(scrollYProgress, [0, 0.55, 1], ["0%", "0%", "-100%"]);
 
   return (
     <main>
