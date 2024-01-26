@@ -17,14 +17,14 @@ export const PriceSection = () => {
 
   // circle animation on scroll
   // prettier-ignore
-  const radius = useTransform(scrollYProgress, [0, 0.2, 0.9], ["0%", "0%", "50%"]);
+  const radius = useTransform(scrollYProgress, [0, 0.4, 0.9], ["0%", "0%", "45%"]);
   const scale = useTransform(scrollYProgress, [0, 0.2, 0.9], [1, 1, 1.2]);
   const y = useTransform(scrollYProgress, [0, 0.9], ["-200%", "0%"]);
 
   return (
     <section
       ref={sectionRef}
-      className="relative flex h-fit flex-col justify-center overflow-hidden bg-flower-50 py-16 sm:h-full sm:py-24"
+      className="relative flex h-fit min-h-[844px] flex-col justify-center overflow-hidden bg-flower-50 py-16 sm:h-full sm:min-h-0 sm:py-24"
     >
       {/*Contents*/}
       <div className="flex flex-col items-center justify-center space-y-12">
