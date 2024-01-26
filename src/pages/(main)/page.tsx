@@ -14,19 +14,25 @@ export const MainPage = () => {
   return (
     <main>
       <HeroSection />
-      <PriceSection />
 
-      <div ref={sectionsRef} className="h-[2000px] w-[100%]">
-        <div className="sticky top-0 flex w-[100%] overflow-hidden bg-red-400">
+      <div ref={sectionsRef} className="h-[200svh] min-h-[2000px] w-[100%]">
+        <div
+          className={
+            "sticky top-0 h-[50%] w-[100%] overflow-hidden bg-ebony-200"
+          }
+        >
           <m.div
-            className="h-[100%] w-[100%] bg-blue-400"
-            style={{
-              x,
-            }}
-          />
+            className={"flex h-full w-[100%] bg-ebony-300"}
+            style={{ translateX: x }}
+          >
+            <div className={"h-full w-[100%] flex-shrink-0 bg-secondary-700"}>
+              <PriceSection />
+            </div>
+            <div className={"h-full w-[100%] flex-shrink-0 bg-lime-200"} />
+          </m.div>
         </div>
       </div>
-      <div className="h-svh w-[100%] bg-flower-500" />
+      <div className="h-svh w-[100%] bg-ebony-300" />
     </main>
   );
 };
