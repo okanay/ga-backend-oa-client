@@ -12,12 +12,19 @@ export const PriceSection = () => {
   // black circle animation on scroll
   // prettier-ignore
   const radius = useTransform( scrollYProgress, [0, 0.5, 1], ["0%", "0%", "50%"]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1.2]);
-  const y = useTransform(scrollYProgress, [0, 1], ["-150%", "0%"]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+  const y = useTransform(scrollYProgress, [0, 1], ["-200%", "0%"]);
 
   // card animation on scroll
   // prettier-ignore
-  const opacity = useTransform(scrollYProgress, [0, 0.80, 1], [0, 0, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.75, 1], [0, 0, 1]);
+  const cardY = useTransform(scrollYProgress, [0, 1], ["100%", "0%"]);
+
+  const hiddenCardY = useTransform(
+    scrollYProgress,
+    [0, 0.77, 0.96],
+    ["0%", "0%", "-100%"]
+  );
 
   return (
     <section
@@ -105,8 +112,8 @@ export const PriceSection = () => {
 
           {/*Card*/}
           <m.div
-            style={{ opacity }}
-            className="relative z-30 mt-8 hidden h-full max-h-[480px] w-full max-w-[340px] rounded-lg border-2 border-secondary-950/10 bg-flower-50 shadow shadow-flower-950/10 sm:block sm:border-secondary-700"
+            style={{ opacity, y: cardY }}
+            className="relative z-30 mt-8 hidden h-full max-h-[480px] w-full max-w-[340px] overflow-hidden rounded-lg border-2 border-secondary-950/10 bg-flower-50 shadow shadow-flower-950/10 sm:block sm:border-secondary-700"
           >
             <div className="flex h-full w-full flex-col items-center justify-start py-12">
               <div className="flex flex-col items-start justify-center gap-12">
@@ -170,13 +177,17 @@ export const PriceSection = () => {
                 </button>
               </div>
             </div>
+            <m.div
+              style={{ y: hiddenCardY }}
+              className={"absolute left-0 top-0 h-full w-full bg-secondary-700"}
+            />
           </m.div>
         </div>
       </div>
 
       {/* Black Circle */}
       <m.div
-        className="absolute bottom-0 left-0 z-20 hidden h-[40svh] w-full bg-secondary-700 sm:block"
+        className="absolute bottom-0 left-0 z-20 hidden h-[35svh] w-full bg-secondary-700 sm:block"
         style={{
           y,
           scale,
