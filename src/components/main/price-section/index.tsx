@@ -37,7 +37,7 @@ export const PriceSection = () => {
             website's indexation. Get started today and see the difference!
           </h5>
 
-          {/*Card*/}
+          {/*Card s*/}
           <div className="relative z-30 mt-8 h-full max-h-[480px] w-full max-w-[340px] rounded-lg border-2 border-secondary-950/10 bg-flower-50 shadow shadow-flower-950/10 sm:hidden sm:border-secondary-700">
             <div className="flex h-full w-full flex-col items-center justify-start py-12">
               <div className="flex flex-col items-start justify-center gap-12">
