@@ -23,7 +23,7 @@ export const PriceSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative flex h-fit min-h-[844px] flex-col justify-center overflow-hidden bg-flower-50 py-16 sm:h-full sm:min-h-0 sm:py-24"
+      className="relative flex h-fit min-h-[844px] flex-col justify-center overflow-hidden bg-flower-50 py-16 sm:h-full sm:min-h-0 sm:py-28"
     >
       {/*Contents*/}
       <div className="flex flex-col items-center justify-center space-y-8 px-4 sm:space-y-16">
@@ -40,9 +40,7 @@ export const PriceSection = () => {
 
         {/*Card*/}
         <m.div
-          className={`relative z-30 rounded-lg border-2 bg-secondary-50 sm:min-h-[30rem] sm:w-[22rem] sm:border-2
-          sm:border-secondary-700
-          `}
+          className={`relative z-30 rounded-lg border-2 border-ebony-950 bg-flower-50 sm:min-h-[30rem] sm:w-[22rem]`}
           style={{ clipPath: clipTemplate }}
         >
           {/* Card Items*/}
@@ -88,7 +86,7 @@ export const PriceSection = () => {
 
       {/* Bottom Circle*/}
       <m.div
-        className="absolute bottom-0 left-0 z-20 h-[18rem] w-full bg-secondary-700 sm:block sm:h-[28rem]"
+        className="absolute bottom-0 left-0 z-20 h-[18rem] w-full bg-ebony-950 sm:block sm:h-[28rem]"
         style={{
           borderTopLeftRadius: radius,
           borderTopRightRadius: radius,
