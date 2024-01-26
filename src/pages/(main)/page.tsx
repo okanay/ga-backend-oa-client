@@ -14,22 +14,19 @@ export const MainPage = () => {
   return (
     <main>
       <HeroSection />
+      <PriceSection />
 
-      <div ref={sectionsRef} className="min-h-[200svh] w-[100%]">
-        <div className={"sticky top-0 flex h-svh w-[100%] overflow-hidden"}>
+      <div ref={sectionsRef} className="h-[2000px] w-[100%]">
+        <div className="sticky top-0 flex w-[100%] overflow-hidden bg-red-400">
           <m.div
-            style={{ translateX: x }}
-            className="flex h-svh w-[100%] flex-shrink-0 bg-red-400"
-          >
-            <div className="h-svh w-[100%] flex-shrink-0 bg-ebony-200">
-              <PriceSection />
-            </div>
-            <div className="relative z-30 h-svh w-[100%] flex-shrink-0 bg-flower-50" />
-          </m.div>
+            className="h-[100%] w-[100%] bg-blue-400"
+            style={{
+              x,
+            }}
+          />
         </div>
       </div>
-
-      <div className="h-svh w-[100%] bg-flower-100" />
+      <div className="h-svh w-[100%] bg-flower-500" />
     </main>
   );
 };
