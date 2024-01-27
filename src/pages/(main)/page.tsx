@@ -1,12 +1,13 @@
 import { HeroSection } from "@/components/main/index/hero-section";
 import { PriceSection } from "@/components/main/index/price-section";
+import { FaqSection } from "@/components/main/index/faq-section";
 
 export const MainPage = () => {
   return (
     <main className={"bg-flower-50"}>
       <HeroSection />
       <PriceSection />
-      <div className={"h-[500px] w-full bg-ebony-950"}></div>
+      <FaqSection />
     </main>
   );
 };
