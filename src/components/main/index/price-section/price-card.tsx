@@ -9,10 +9,9 @@ type PriceCardProps = React.FC<{
 }>;
 
 export const PriceCard: PriceCardProps = ({ scrollYProgress, isMobile }) => {
-  const clipTemplateValue = isMobile ? 0.58 : 0.76;
   const clipValue = !isMobile ? 100 : 0;
   // prettier-ignore
-  const clipTop = useTransform(scrollYProgress, [0, clipTemplateValue, 0.9], [clipValue, clipValue, 0]);
+  const clipTop = useTransform(scrollYProgress, [0, 0.75, 1], [clipValue, clipValue, 0]);
   const clipTemplate = useMotionTemplate`inset(0% 0% ${clipTop}% 0%)`;
 
   return (
