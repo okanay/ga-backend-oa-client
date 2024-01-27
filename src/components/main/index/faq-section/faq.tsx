@@ -10,8 +10,8 @@ export const Faq = () => {
   const { selectedFaq, handleFaqOnClick } = useFaq();
 
   return (
-    <div className="container mx-auto max-w-4xl px-6 py-10">
-      <div className="mt-12 space-y-8">
+    <div className="container mx-auto max-w-4xl px-8">
+      <div className="space-y-8">
         {FaqData.map((faq, index) => (
           <div
             key={"f.a.q" + index}
@@ -19,12 +19,15 @@ export const Faq = () => {
           >
             <button
               onClick={() => handleFaqOnClick(index)}
-              className="flex w-full items-center justify-between p-8"
+              className="flex w-full items-center justify-between gap-8 px-4 py-8"
             >
-              <h1 className="font-semibold text-flower-50">{faq.title}</h1>
+              <h1 className="text-start font-semibold text-flower-50">
+                {faq.title}
+              </h1>
               <m.div
                 variants={plusIconVariants}
                 animate={selectedFaq === index ? "open" : "closed"}
+                className={"flex-shrink-0"}
               >
                 <PlusIcon />
               </m.div>
