@@ -22,7 +22,7 @@ export const Faq = () => {
               className="flex w-full items-center justify-between gap-8 px-4 py-8"
             >
               <h1 className="text-start font-semibold text-flower-50">
-                {faq.title}
+                {faq.question}
               </h1>
               <m.div
                 variants={plusIconVariants}
@@ -39,7 +39,7 @@ export const Faq = () => {
               className={`overflow-hidden`}
             >
               <hr className="border-flower-50" />
-              <p className="p-8 text-sm text-flower-50">{faq.description}</p>
+              <p className="p-8 text-sm text-flower-50">{faq.answer}</p>
             </m.div>
           </div>
         ))}

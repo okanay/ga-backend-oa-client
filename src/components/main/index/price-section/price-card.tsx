@@ -1,19 +1,18 @@
 import { m, useTransform, useMotionTemplate, MotionValue } from "framer-motion";
-import { useMediaQuery } from "@mantine/hooks";
 
 import { CheckIcon } from "./check-icon.tsx";
 import { PriceCardButton } from "@/components/main/index/price-section/price-card-btn.tsx";
 
 type PriceCardProps = React.FC<{
   scrollYProgress: MotionValue<number>;
+  isMobile: boolean;
 }>;
 
-export const PriceCard: PriceCardProps = ({ scrollYProgress }) => {
-  const isMatch = useMediaQuery("(max-width: 640px)");
-
-  const clipTemplateValue = isMatch ? 0.58 : 0.76;
+export const PriceCard: PriceCardProps = ({ scrollYProgress, isMobile }) => {
+  const clipTemplateValue = isMobile ? 0.58 : 0.76;
+  const clipValue = !isMobile ? 100 : 0;
   // prettier-ignore
-  const clipTop = useTransform(scrollYProgress, [0, clipTemplateValue, 0.9], [100, 100, 0]);
+  const clipTop = useTransform(scrollYProgress, [0, clipTemplateValue, 0.9], [clipValue, clipValue, 0]);
   const clipTemplate = useMotionTemplate`inset(0% 0% ${clipTop}% 0%)`;
 
   return (
