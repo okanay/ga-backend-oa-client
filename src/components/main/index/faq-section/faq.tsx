@@ -1,26 +1,13 @@
+// prettier-ignore
+import { plusIconVariants, descriptionVariants } from "@/constants/faq/animation-data.ts";
 import { FaqData } from "@/constants/faq/data.ts";
-import { PlusIcon } from "@/components/main/index/faq-section/plus-icon.tsx";
-import { useState } from "react";
 import { m } from "framer-motion";
 
-const variants = {
-  open: { opacity: 1, height: "auto" },
-  closed: { opacity: 0, height: 0 },
-};
-
-const plusIconVariants = {
-  open: { rotate: 45 },
-  closed: { rotate: 0 },
-};
+import { PlusIcon } from "./plus-icon.tsx";
+import { useFaq } from "@/hooks/faq/useFaq.ts";
 
 export const Faq = () => {
-  const [selectedFaq, setSelectedFaq] = useState<number | null>(null);
-
-  const handleFaqOnClick = (index: number) => {
-    setSelectedFaq(index);
-
-    if (selectedFaq === index) setSelectedFaq(null);
-  };
+  const { selectedFaq, handleFaqOnClick } = useFaq();
 
   return (
     <div className="container mx-auto max-w-4xl px-6 py-10">
@@ -43,7 +30,7 @@ export const Faq = () => {
               </m.div>
             </button>
             <m.div
-              variants={variants}
+              variants={descriptionVariants}
               initial="closed"
               animate={selectedFaq === index ? "open" : "closed"}
               className={`overflow-hidden`}
