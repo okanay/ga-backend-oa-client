@@ -21,7 +21,7 @@ export const Faq = () => {
               onClick={() => handleFaqOnClick(index)}
               className="flex w-full items-center justify-between gap-8 p-6 sm:p-8"
             >
-              <h1 className="text-start text-sm font-semibold text-flower-50 sm:text-base">
+              <h1 className="text-start text-sm font-semibold text-flower-50 sm:text-xl">
                 {faq.question}
               </h1>
               <m.div
@@ -39,7 +39,7 @@ export const Faq = () => {
               className={`overflow-hidden`}
             >
               <hr className="border-flower-50" />
-              <p className="p-6 text-start text-sm text-flower-50 sm:p-8">
+              <p className="p-6 text-start text-sm text-flower-50 sm:p-8 sm:text-lg">
                 {faq.answer}
               </p>
             </m.div>
