@@ -11,7 +11,7 @@ export const Faq = () => {
 
   return (
     <div className="container mx-auto max-w-4xl px-8">
-      <div className="space-y-8">
+      <div className="space-y-6">
         {FaqData.map((faq, index) => (
           <div
             key={"f.a.q" + index}
@@ -21,7 +21,7 @@ export const Faq = () => {
               onClick={() => handleFaqOnClick(index)}
               className="flex w-full items-center justify-between gap-8 p-6 sm:p-8"
             >
-              <h1 className="text-start font-semibold text-flower-50">
+              <h1 className="text-start text-sm font-semibold text-flower-50 sm:text-base">
                 {faq.question}
               </h1>
               <m.div

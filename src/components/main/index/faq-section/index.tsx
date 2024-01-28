@@ -3,11 +3,9 @@ import { Faq } from "@/components/main/index/faq-section/faq.tsx";
 
 export const FaqSection = () => {
   return (
-    <section className="h-full w-full bg-ebony-950 pb-12 sm:pb-24">
+    <section className="h-full w-full space-y-12 bg-ebony-950 py-12 sm:py-24">
       <FaqHeader />
-      <div className={"mt-[2.5rem] sm:mt-[4.25rem]"}>
-        <Faq />
-      </div>
+      <Faq />
     </section>
   );
 };

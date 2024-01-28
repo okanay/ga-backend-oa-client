@@ -6,14 +6,12 @@ import { m, useInView } from "framer-motion";
 
 export const FeatureSection = () => {
   return (
-    <section className="relative mx-auto max-w-6xl bg-flower-50 px-8 py-8 lg:py-24">
+    <section className="relative mx-auto max-w-6xl space-y-12 bg-flower-50 px-4 py-12 sm:px-16 sm:py-24">
       <FeatureHeader />
-      <div className={"mt-[2.5rem] sm:mt-[4.25rem]"}>
-        <div className={"flex w-full flex-col text-ebony-950"}>
-          {featuresData.map((feature, index) => (
-            <FeatureItem key={feature.header} {...feature} index={index} />
-          ))}
-        </div>
+      <div className={"flex w-full flex-col text-ebony-950"}>
+        {featuresData.map((feature, index) => (
+          <FeatureItem key={feature.header} {...feature} index={index} />
+        ))}
       </div>
     </section>
   );
