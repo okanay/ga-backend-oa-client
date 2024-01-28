@@ -20,7 +20,10 @@ export const FeatureItemWrapper: Props = ({
         ease: "easeIn",
         duration: 0.45,
       }}
-      className={twMerge(className, "mb-8 flex flex-col space-y-4 sm:mb-12")}
+      className={twMerge(
+        className,
+        "mb-8 flex flex-col space-y-4 text-flower-50 sm:mb-12"
+      )}
     >
       {children}
     </m.div>

@@ -14,7 +14,7 @@ export const FeatureItemIndex = ({
       style={{
         order,
       }}
-      className={`relative flex size-6 flex-shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-secondary-700 text-xs sm:size-8 sm:text-base `}
+      className={`relative flex size-6 flex-shrink-0 items-center justify-center overflow-hidden rounded-full border-4 border-secondary-700 text-xs sm:size-8 sm:text-base `}
     >
       <span>{children}</span>
       <m.div

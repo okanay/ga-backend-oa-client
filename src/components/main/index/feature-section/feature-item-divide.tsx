@@ -15,7 +15,7 @@ export const FeatureItemDivide: Props = ({ isInView }) => {
         duration: 0.45,
         delay: 0.05,
       }}
-      className={`h-[2px] w-full bg-secondary-700`}
+      className={`h-[1px] w-full bg-flower-50`}
     />
   );
 };
