@@ -9,7 +9,7 @@ import { GridRows } from "./grid-rows";
 
 export const ArrowAnimation = () => {
   return (
-    <div className={"absolute inset-0 overflow-hidden"}>
+    <div className={"absolute bottom-0 h-[98vh] w-full overflow-hidden"}>
       <GridCols>
         <GridRows>
           <>

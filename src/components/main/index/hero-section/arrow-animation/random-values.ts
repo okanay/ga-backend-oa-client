@@ -1,8 +1,8 @@
 export const getMaxWidth = () => {
   const screenWidth = window.innerWidth;
 
-  const minWidth = 5;
-  const maxWidth = 40;
+  const minWidth = 8;
+  const maxWidth = 25;
   const screenFactor = 0.1;
 
   const randomWidthMax = Math.min(
@@ -19,8 +19,8 @@ export const getMaxWidth = () => {
 export const getMaxHeight = () => {
   const screenHeight = window.innerHeight;
 
-  const minHeight = 5;
-  const maxHeight = 40;
+  const minHeight = 10;
+  const maxHeight = 30;
   const screenFactor = 0.1;
 
   const randomHeightMax = Math.min(

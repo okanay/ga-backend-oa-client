@@ -2,7 +2,7 @@ import { useMediaQuery } from "@mantine/hooks";
 
 export const GridCols = ({ children }: { children: React.ReactNode }) => {
   const matches = useMediaQuery("(max-width: 640px)");
-  const columns = matches ? 4 : 8;
+  const columns = matches ? 4 : 9;
 
   return (
     <div
