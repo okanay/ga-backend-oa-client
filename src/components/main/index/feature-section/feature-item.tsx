@@ -7,18 +7,12 @@ import { FeatureItemHeader } from "./feature-item-header.tsx";
 import { FeatureItemDivide } from "@/components/main/index/feature-section/feature-item-divide.tsx";
 import { FeatureItemWrapper } from "@/components/main/index/feature-section/feature-item-wrapper.tsx";
 
-interface FeatureItemProps extends Feature {
+interface Props extends Feature {
   index: number;
 }
 
-export const FeatureItem = ({
-  rotate,
-  description,
-  header,
-  index,
-}: FeatureItemProps) => {
-  //
-  //
+export const FeatureItem = ({ description, header, index }: Props) => {
+  const rotate = (index + 1) % 2 !== 0 ? "start" : "end";
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-150px" });
 
@@ -27,7 +21,7 @@ export const FeatureItem = ({
       <FeatureItemWrapper
         isInView={isInView}
         className={
-          rotate === "left"
+          rotate === "start"
             ? "items-start justify-start text-start"
             : "items-end justify-end text-end"
         }
