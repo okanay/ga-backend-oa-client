@@ -11,12 +11,12 @@ type PriceCardProps = React.FC<{
 export const PriceCard: PriceCardProps = ({ scrollYProgress, isMobile }) => {
   const clipValue = !isMobile ? 100 : 0;
   // prettier-ignore
-  const clipTop = useTransform(scrollYProgress, [0, 0.75, 1], [clipValue, clipValue, 0]);
+  const clipTop = useTransform(scrollYProgress, [0, 0.8, 1], [clipValue, clipValue, 0]);
   const clipTemplate = useMotionTemplate`inset(0% 0% ${clipTop}% 0%)`;
 
   return (
     <m.div
-      className={`relative z-30 rounded-lg border-2 border-ebony-950 bg-flower-50 p-8 sm:min-h-[28rem] sm:w-[20rem] sm:p-12`}
+      className={`relative z-30 rounded-lg border-2 border-ebony-950 bg-flower-50 px-6 py-8 sm:min-h-[28rem] sm:w-[20rem] sm:px-8 sm:py-12`}
       style={{ clipPath: clipTemplate }}
     >
       <div className="flex w-full flex-col justify-between space-y-12">
