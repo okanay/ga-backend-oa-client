@@ -6,33 +6,42 @@ export type Feature = {
 
 export const featuresData: Feature[] = [
   {
+    // Focus on the benefit: Higher rankings = more leads/sales
     rotate: "left",
-    header: "Are you feeling invisible online?",
+    header: "Rank Above Your Competitors",
     description:
-      "Your website might be missing out on valuable traffic because it's not indexed by search engines. Let's get those pages seen and make your business shine!",
+      "Unlock the power of SEO indexing and dominate search results. Attract more leads and grow your business.",
   },
+
   {
+    // Use active voice and emphasize visibility
     rotate: "right",
-    header: "Wondering why your competitors are ranking higher?",
+    header: "Get Your Website Seen",
     description:
-      "SEO indexing could be the secret ingredient they're using. Get the edge you need and start climbing those search results!",
+      "Stop being invisible online. Get your website indexed and attract more visitors with powerful SEO.",
   },
+
   {
+    // Combine issues for clarity and highlight the solution
     rotate: "left",
-    header: "Frustrated with slow site speed and crawl errors?",
+    header: "Fix Speed & Errors, Boost Indexing",
     description:
-      "These technical issues could be hindering your indexing progress. Let's troubleshoot together and get your website back on track.",
+      "Slow site speed and crawl errors? We'll fix them and optimize your website for fast, efficient indexing.",
   },
+
   {
+    // Simplify and personalize
     rotate: "right",
-    header: "Need help navigating the complexities of SEO?",
+    header: "Navigate SEO with Expert Guidance",
     description:
-      "You're not alone! Our experts can guide you through the process and help you achieve optimal indexing results.",
+      "Don't go it alone. Our SEO experts will guide you to top search positions and optimal indexing results.",
   },
+
   {
+    // Use a strong call to action
+    header: "Unleash SEO's Full Potential",
     rotate: "left",
-    header: "Ready to take your SEO to the next level?",
     description:
-      "Unlock the full potential of SEO indexing and watch your website traffic soar. Get started today!",
+      "Watch your website traffic skyrocket with optimized SEO indexing. Get started today and see the results!",
   },
 ];
