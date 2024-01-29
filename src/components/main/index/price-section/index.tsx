@@ -19,19 +19,17 @@ export const PriceSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative flex flex-col justify-center overflow-hidden bg-flower-50 py-12 sm:py-24"
+      className="relative flex flex-col items-center justify-center space-y-12 overflow-hidden bg-flower-50 px-4 py-12 sm:py-24"
     >
-      <div className="flex flex-col items-center justify-center space-y-12 px-4">
-        <PriceHeader />
-        <PriceCard
-          scrollYProgress={scrollYProgress}
-          isMobile={isMobile as boolean}
-        />
-        <BlackCircleAnim
-          scrollYProgress={scrollYProgress}
-          isMobile={isMobile as boolean}
-        />
-      </div>
+      <PriceHeader />
+      <PriceCard
+        scrollYProgress={scrollYProgress}
+        isMobile={isMobile as boolean}
+      />
+      <BlackCircleAnim
+        scrollYProgress={scrollYProgress}
+        isMobile={isMobile as boolean}
+      />
     </section>
   );
 };

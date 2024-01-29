@@ -10,7 +10,7 @@ export const Faq = () => {
   const { selectedFaq, handleFaqOnClick } = useFaq();
 
   return (
-    <div className="container mx-auto max-w-[64rem] px-8">
+    <div className="container mx-auto max-w-[64rem]">
       <div className="space-y-6">
         {FaqData.map((faq, index) => (
           <div

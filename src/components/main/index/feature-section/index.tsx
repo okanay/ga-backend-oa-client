@@ -4,14 +4,12 @@ import { FeatureItem } from "@/components/main/index/feature-section/feature-ite
 
 export const FeatureSection = () => {
   return (
-    <section className={"bg-ebony-950 "}>
-      <div className="relative mx-auto max-w-[64rem] space-y-12 px-8 py-12">
-        <FeatureHeader />
-        <div className={"flex w-full flex-col text-ebony-950"}>
-          {featuresData.map((feature, index) => (
-            <FeatureItem key={feature.header} {...feature} index={index} />
-          ))}
-        </div>
+    <section className="relative mx-auto space-y-12 bg-ebony-950 px-4 py-12">
+      <FeatureHeader />
+      <div className="mx-auto flex w-full max-w-[64rem] flex-col text-ebony-950">
+        {featuresData.map((feature, index) => (
+          <FeatureItem key={feature.header} {...feature} index={index} />
+        ))}
       </div>
     </section>
   );
