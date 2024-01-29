@@ -8,10 +8,10 @@ export const IndexSections = () => {
   return (
     <main className={"bg-flower-50"}>
       <HeroSection />
-      <PriceSection />
-      <FeatureSection />
-      <FaqSection />
-      <ContactForm />
+      {/*<PriceSection />*/}
+      {/*<FeatureSection />*/}
+      {/*<FaqSection />*/}
+      {/*<ContactForm />*/}
     </main>
   );
 };
