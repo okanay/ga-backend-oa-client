@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-[999] h-fit w-full bg-secondary-700">
+    <header className="fixed top-0 z-[100] h-fit w-full bg-secondary-700 shadow-sm shadow-secondary-700/20">
       <div className="relative z-20 mx-auto max-w-7xl">
         <nav className="flex items-center justify-between px-4 py-4">
           <Link to={"/"}>
-            <span className="font-plexSansSerif text-2xl sm:text-4xl">
-              Grow Pusher
+            <span className="font-plex-sans-serif text-2xl sm:text-4xl">
+              Awesome Page
             </span>
           </Link>
           <ul className="hidden items-center justify-end gap-12 text-lg sm:flex">
