@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Plex Sans Serif";
+    font-style: normal;
+    font-weight: 300;
+    src: url("ibmplexserif-light-webfont.woff2") format('woff2'),
+    url('ibmplexserif-light-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Plex Sans Serif";
+    font-style: normal;
+    font-weight: 500;
+    src: url("ibmplexserif-regular-webfont.woff2") format('woff2'),
+    url('ibmplexserif-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Plex Sans Serif";
+    font-style: normal;
+    font-weight: 700;
+    src: url("ibmplexserif-medium-webfont.woff2") format('woff2'),
+    url('ibmplexserif-medium-webfont.woff') format('woff');
+}
+
+.font-plex-sans-serif {
+    font-family: "Plex Sans Serif", "sans-serif";
+}

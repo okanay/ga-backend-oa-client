@@ -41,8 +41,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      plexSansSerif: ["IBM Plex Serif", "sans-serif"],
-      plexSans: ["IBM Plex Sans", "sans-serif"],
+      // plexSansSerif: ["IBM Plex Serif", "sans-serif"],
+      // plexSans: ["IBM Plex Sans", "sans-serif"],
     },
   },
 };

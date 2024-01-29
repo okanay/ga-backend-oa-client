@@ -16,7 +16,7 @@ export const FeatureItemHeader = ({
       <FeatureItemIndex order={rotate === "start" ? 0 : 1} isInView={isInView}>
         {index}
       </FeatureItemIndex>
-      <h1 className={"font-plexSansSerif text-xl sm:text-2xl md:text-4xl"}>
+      <h1 className={"font-plex-sans-serif text-xl sm:text-2xl md:text-4xl"}>
         {children}
       </h1>
     </div>
