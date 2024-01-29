@@ -10,7 +10,7 @@ export const Header = () => {
               Awesome Page
             </span>
           </Link>
-          <ul className="hidden items-center justify-end gap-12 text-lg sm:flex">
+          <ul className="font-plex-mono hidden items-center justify-end gap-12 text-base sm:flex">
             <li>
               <Link to={"#faq"}>
                 <span>F.A.Q</span>
