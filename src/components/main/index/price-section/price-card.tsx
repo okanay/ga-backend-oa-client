@@ -16,10 +16,10 @@ export const PriceCard: PriceCardProps = ({ scrollYProgress, isMobile }) => {
 
   return (
     <m.div
-      className={`relative z-30 rounded-lg border-[0.24rem] border-ebony-950 bg-flower-50 sm:min-h-[30rem] sm:w-[22rem]`}
+      className={`relative z-30 rounded-lg border-2 border-ebony-950 bg-flower-50 p-8 sm:min-h-[28rem] sm:w-[20rem] sm:p-12`}
       style={{ clipPath: clipTemplate }}
     >
-      <div className="flex w-full flex-col justify-between space-y-12 px-12 py-12 sm:min-h-[30rem]">
+      <div className="flex w-full flex-col justify-between space-y-12">
         {/*Card Top*/}
         <div>
           <h6 className="text-base font-bold tracking-wide text-ebony-950 sm:text-lg">
