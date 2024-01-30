@@ -1,7 +1,7 @@
 import { AnimatePresence, m } from "framer-motion";
 import { dummyPages } from "../../../../../../constants/main-index/browser/data.ts";
 
-import { useSelectedPageIndex } from "@/hooks/browser-hooks/use-selected-page-index.tsx";
+import { useSelectedPageIndex } from "@/hooks/index-ui-hooks/browser-hooks/use-selected-page-index.tsx";
 
 type Props = React.FC<{
   children: React.ReactNode;

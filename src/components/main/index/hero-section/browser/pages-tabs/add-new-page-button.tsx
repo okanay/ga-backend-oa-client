@@ -1,4 +1,4 @@
-import { useBrowserValue } from "@/hooks/browser-hooks/use-browser-value.ts";
+import { useBrowserValue } from "@/hooks/index-ui-hooks/browser-hooks/use-browser-value.ts";
 
 export const AddNewPageButton = () => {
   const { handlePageAdd } = useBrowserValue();

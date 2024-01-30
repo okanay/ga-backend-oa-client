@@ -27,9 +27,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        "xs-phone": "320px",
-        "sm-phone": "375px",
-        "base-phone": "425px",
+        "sm-phone": "360px",
+        "base-phone": "400px",
         "lg-phone": "440px",
         "xl-phone": "480px",
       },
