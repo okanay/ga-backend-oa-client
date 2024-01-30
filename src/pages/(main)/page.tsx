@@ -1,5 +1,7 @@
 import { IndexSections } from "@/components/main/index";
 
-export const MainPage = () => {
+const MainPage = () => {
   return <IndexSections />;
 };
+
+export default MainPage;

@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/providers/theme-provider";
 import { FramerProvider } from "@/providers/framer-provider";
 import { JotaiProvider } from "@/providers/jotai-provider";
 import { LenisProvider } from "@/providers/lenis-provider";
+import { AuthProvider } from "@/providers/auth-provider/auth-provider.tsx";
 
 export const AppProviders = () => {
   return (
@@ -11,7 +12,9 @@ export const AppProviders = () => {
         <ThemeProvider>
           <FramerProvider>
             <LenisProvider>
-              <ReactRouter />
+              <AuthProvider>
+                <ReactRouter />
+              </AuthProvider>
             </LenisProvider>
           </FramerProvider>
         </ThemeProvider>

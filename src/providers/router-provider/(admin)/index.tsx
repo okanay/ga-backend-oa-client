@@ -1,7 +1,11 @@
+import React from "react";
+
 import { RouteObject } from "react-router-dom";
 import { ErrorBoundary } from "@/pages/error.tsx";
 import { AdminLayout } from "@/pages/(admin)/layout.tsx";
-import { AdminPage } from "@/pages/(admin)/page.tsx";
+import ProtectedRoute from "@/providers/router-provider/protected-route.tsx";
+
+const AdminPage = React.lazy(() => import("@/pages/(admin)/page.tsx"));
 
 const AdminPages: RouteObject = {
   path: "/admin",
@@ -10,7 +14,11 @@ const AdminPages: RouteObject = {
   children: [
     {
       index: true,
-      element: <AdminPage />,
+      element: (
+        <ProtectedRoute>
+          <AdminPage />
+        </ProtectedRoute>
+      ),
     },
   ],
 };
