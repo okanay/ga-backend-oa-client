@@ -1,11 +1,15 @@
 import { m } from "framer-motion";
-import { plusIconVariants } from "@/constants/faq/animation-data.ts";
 import { PlusIcon } from "@/components/main/index/faq-section/plus-icon.tsx";
 
 type FaqIconType = React.FC<{
   index: number;
   selectedFaq: number | null;
 }>;
+
+const plusIconVariants = {
+  open: { rotate: 45 },
+  closed: { rotate: 0 },
+};
 
 export const FaqIcon: FaqIconType = ({ index, selectedFaq }) => {
   return (

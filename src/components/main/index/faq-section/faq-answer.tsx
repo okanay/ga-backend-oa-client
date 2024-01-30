@@ -1,5 +1,4 @@
 import { PropsWithChildren } from "react";
-import { descriptionVariants } from "@/constants/faq/animation-data.ts";
 import { m } from "framer-motion";
 
 type FaqAnswerType = React.FC<
@@ -8,6 +7,11 @@ type FaqAnswerType = React.FC<
     selectedFaq: number | null;
   }>
 >;
+
+const descriptionVariants = {
+  open: { opacity: 1, height: "auto" },
+  closed: { opacity: 0, height: 0 },
+};
 
 export const FaqAnswer: FaqAnswerType = ({ children, selectedFaq, index }) => {
   return (
