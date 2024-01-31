@@ -9,7 +9,7 @@ const topics = ["General", "Feedback", "Support", "Business", "Other"];
 export const ContactForm = () => {
   return (
     <div className={"font-plex-mono flex h-full w-full flex-col gap-8"}>
-      <form className="mx-auto flex w-full max-w-[680px] flex-col items-center justify-center gap-8 px-8">
+      <form className="mx-auto flex w-full max-w-[680px] flex-col items-center justify-center gap-8">
         <div className="flex w-full flex-col items-center justify-center gap-6 sm:flex-row">
           <ContactInputWrapper className={"sm:max-w-[220px] sm:flex-shrink-0"}>
             <ContactInput type="text" placeholder="name" />
