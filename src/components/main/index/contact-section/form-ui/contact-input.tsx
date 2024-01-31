@@ -7,7 +7,7 @@ export const ContactInput: ContactInputProps = ({ className, ...props }) => {
   return (
     <input
       className={twMerge(
-        `peer w-full border-b-2 border-ebony-950 bg-flower-50 p-2 text-sm text-ebony-950 transition-colors  
+        `peer h-[44px] w-full border-b-2 border-ebony-950 bg-flower-50 px-2 text-sm text-ebony-950 transition-colors  
         duration-300 ease-out placeholder:text-transparent 
         focus:border-b-ebony-950/50 
         focus:outline-none sm:text-base`,

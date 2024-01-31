@@ -10,7 +10,7 @@ export const ContactInputWrapper = ({
   className,
 }: ContactInputWrapperProps) => {
   return (
-    <div className={twMerge("font-plex-mono group relative w-full", className)}>
+    <div className={twMerge("group relative w-full", className)}>
       {children}
     </div>
   );
