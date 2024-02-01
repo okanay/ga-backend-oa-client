@@ -25,8 +25,8 @@ export const ContactForm = () => {
     formState: { errors, isSubmitting },
   } = useForm<ContactFormFields>({
     resolver: zodResolver(ContactFormSchema),
-    mode: "onSubmit",
-    shouldFocusError: false,
+    mode: "all",
+    shouldFocusError: true,
   });
 
   const onSubmit = async (data: ContactFormFields) => {
@@ -108,21 +108,15 @@ export const ContactForm = () => {
           />
           <ContactLabel
             htmlFor="message"
-            className={`${errors.message && "text-rose-400"} -top-2.5`}
+            className={`${errors.message && "text-rose-400"} -top-2`}
           >
             Your Message
           </ContactLabel>
         </ContactInputWrapper>
-        <ContactButton
-          type={"submit"}
-          disabled={isSubmitting}
-          className="transition-all duration-300 hover:bg-secondary-800 disabled:opacity-50"
-        />
-        {errors.root && (
-          <div className="-mt-4 text-xs text-rose-400 sm:text-sm">
-            <p>{errors.root.message}</p>
-          </div>
-        )}
+        <ContactButton type={"submit"} disabled={isSubmitting} />
+        <div className="-mb-[24px] h-[24px] text-xs text-rose-400 sm:text-sm">
+          <p>{errors?.root?.message}</p>
+        </div>
       </form>
     </div>
   );
