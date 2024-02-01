@@ -3,7 +3,7 @@ import { ContactForm } from "@/components/main/index/contact-section/contact-for
 
 export const ContactSection = () => {
   return (
-    <section className="bg-flower-50">
+    <section id={"#contact"} className="bg-flower-50">
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center space-y-12 px-4 py-12 sm:py-24">
         <ContactHeader />
         <ContactForm />

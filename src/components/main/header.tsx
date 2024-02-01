@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { handleSmoothScroll } from "@/lib/smooth-scroll.ts";
 
 export const Header = () => {
   return (
@@ -11,15 +12,15 @@ export const Header = () => {
             </span>
           </Link>
           <ul className="font-plex-mono hidden items-center justify-end gap-12 text-base sm:flex">
-            <li>
-              <Link to={"#faq"}>
-                <span>F.A.Q</span>
-              </Link>
+            <li onClick={() => handleSmoothScroll("#price")}>
+              <span className={"cursor-pointer"}>Pricing</span>
             </li>
-            <li>
-              <Link to={"#pricing"}>
-                <span>Pricing</span>
-              </Link>
+            <li onClick={() => handleSmoothScroll("#faq")}>
+              <span className={"cursor-pointer"}>F.A.Q</span>
+            </li>
+
+            <li onClick={() => handleSmoothScroll("#contact")}>
+              <span className={"cursor-pointer"}>Contact</span>
             </li>
             <li>
               <Link to={"/dashboard"}>

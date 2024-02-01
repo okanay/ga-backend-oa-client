@@ -17,6 +17,7 @@ export const PriceSection = () => {
 
   return (
     <section
+      id="#price"
       ref={sectionRef}
       className="relative flex flex-col items-center justify-center space-y-12 overflow-hidden bg-flower-50 px-4 py-12 sm:py-24"
     >
