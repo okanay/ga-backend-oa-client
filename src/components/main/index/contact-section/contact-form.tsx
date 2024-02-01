@@ -15,23 +15,23 @@ import { ContactButton } from "@/components/main/index/contact-section/form-ui/c
 const topics = ["General", "Feedback", "Support", "Business", "Other"];
 
 export const ContactForm = () => {
+  console.log("rendering ContactForm");
+
+  // React Hook Form Declarations
   const {
-    // reset,
-    // clearErrors,
     register,
     handleSubmit,
-    setValue,
     setError,
+    setValue: setContactFormValue,
     formState: { errors, isSubmitting },
   } = useForm<ContactFormFields>({
     resolver: zodResolver(ContactFormSchema),
-    mode: "all",
-    shouldFocusError: true,
+    mode: "onSubmit",
   });
 
-  const onSubmit = async (data: ContactFormFields) => {
+  // Send form data to API
+  const onContactFormSubmit = async (data: ContactFormFields) => {
     const url = import.meta.env.VITE_CONTACT_API_URL;
-
     const response = await fetch(url, {
       method: "POST",
       headers: {
@@ -44,17 +44,16 @@ export const ContactForm = () => {
         message: "Something went wrong. Please try again later.",
       });
     });
-
-    console.log(data);
     console.log(response);
   };
 
   return (
     <div className={"font-plex-mono flex h-full w-full flex-col gap-8"}>
       <form
-        onSubmit={handleSubmit(onSubmit)}
+        onSubmit={handleSubmit(onContactFormSubmit)}
         className="mx-auto flex w-full max-w-[680px] flex-col items-center justify-center gap-8"
       >
+        {/* Name and Email Inputs */}
         <div className="flex w-full flex-col items-center justify-center gap-6 sm:flex-row">
           <ContactInputWrapper className={`sm:max-w-[220px] sm:flex-shrink-0`}>
             <ContactInput
@@ -83,11 +82,12 @@ export const ContactForm = () => {
             </ContactLabel>
           </ContactInputWrapper>
         </div>
+        {/* Topic Input */}
         <ContactInputWrapper className={"my-2"}>
           <ContactTopic
             onSelectionChange={(value) => {
-              setValue("topicId", Number(value));
-              setValue("topic", topics[Number(value)]);
+              setContactFormValue("topicId", Number(value));
+              setContactFormValue("topic", topics[Number(value)]);
             }}
             topics={topics}
             placeholder={"Select a topic"}
@@ -101,6 +101,7 @@ export const ContactForm = () => {
             About
           </ContactLabel>
         </ContactInputWrapper>
+        {/* Message Input */}
         <ContactInputWrapper className={""}>
           <ContactTextField
             {...register("message")}
@@ -113,6 +114,7 @@ export const ContactForm = () => {
             Your Message
           </ContactLabel>
         </ContactInputWrapper>
+        {/* Submit Button */}
         <ContactButton type={"submit"} disabled={isSubmitting} />
         <div className="-mb-[24px] h-[24px] text-xs text-rose-400 sm:text-sm">
           <p>{errors?.root?.message}</p>
