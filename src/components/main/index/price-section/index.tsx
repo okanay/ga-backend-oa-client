@@ -9,6 +9,7 @@ import { useMediaQuery } from "@mantine/hooks";
 export const PriceSection = () => {
   const isMobile = useMediaQuery("(max-width: 640px)");
   const sectionRef = useRef<HTMLElement>(null);
+
   const { scrollYProgress } = useScroll({
     offset: ["start end", "end end"],
     target: sectionRef,
