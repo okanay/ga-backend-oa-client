@@ -1,7 +1,7 @@
-import { dummyPages } from "@/constants/main-index/browser/data.ts";
+import { dummyPages } from "@/constants/index/hero/browser/data.ts";
 
-import { useSelectedPageIndex } from "@/hooks/index-ui-hooks/browser-hooks/use-selected-page-index.tsx";
-import { usePagesCount } from "@/hooks/index-ui-hooks/browser-hooks/use-pages-count.tsx";
+import { useSelectedPageIndex } from "@/hooks/index/hero/browser/use-selected-page-index.tsx";
+import { usePagesCount } from "@/hooks/index/hero/browser/use-pages-count.tsx";
 
 import { DummyDot } from "./dummy-dot.tsx";
 

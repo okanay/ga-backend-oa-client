@@ -1,6 +1,6 @@
-import { usePagesCount } from "@/hooks/index-ui-hooks/browser-hooks/use-pages-count.tsx";
-import { usePages } from "@/hooks/index-ui-hooks/browser-hooks/use-pages.tsx";
-import { useSelectedPageIndex } from "@/hooks/index-ui-hooks/browser-hooks/use-selected-page-index.tsx";
+import { usePagesCount } from "@/hooks/index/hero/browser/use-pages-count.tsx";
+import { usePages } from "@/hooks/index/hero/browser/use-pages.tsx";
+import { useSelectedPageIndex } from "@/hooks/index/hero/browser/use-selected-page-index.tsx";
 
 export const useBrowserValue = () => {
   const { pages, setPages, dummyPages } = usePages();

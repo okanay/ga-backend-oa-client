@@ -1,4 +1,4 @@
-import { featuresData } from "@/constants/features/data.ts";
+import { featuresData } from "@/constants/index/features/data.ts";
 import { FeatureHeader } from "@/components/main/index/feature-section/feature-header.tsx";
 import { FeatureItem } from "@/components/main/index/feature-section/feature-item.tsx";
 

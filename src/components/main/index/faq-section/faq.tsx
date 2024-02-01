@@ -1,6 +1,6 @@
-import { FaqData } from "@/constants/faq/data.ts";
+import { FaqData } from "@/constants/index/faq/data.ts";
 
-import { useFaq } from "@/hooks/index-ui-hooks/faq/useFaq.ts";
+import { useFaq } from "@/hooks/index/faq/useFaq.ts";
 import { FaqIcon } from "@/components/main/index/faq-section/faq-icon.tsx";
 import { FaqQuestion } from "@/components/main/index/faq-section/faq-question.tsx";
 import { FaqAnswer } from "@/components/main/index/faq-section/faq-answer.tsx";

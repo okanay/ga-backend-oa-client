@@ -1,6 +1,6 @@
 import { SelectedPage } from "@/components/main/index/hero-section/browser/pages-tabs/pages-selected.tsx";
 import { UnSelectedPage } from "@/components/main/index/hero-section/browser/pages-tabs/pages-un-selected.tsx";
-import { useBrowserValue } from "@/hooks/index-ui-hooks/browser-hooks/use-browser-value.ts";
+import { useBrowserValue } from "@/hooks/index/hero/browser/use-browser-value.ts";
 import { useEffect } from "react";
 
 export const PageList = () => {

@@ -1,6 +1,8 @@
 import { createContext, PropsWithChildren, useState } from "react";
 import { UserType } from "@/types/user.ts";
 
+export type SessionType = "loading" | "authorize" | "unauthorize";
+
 export const AuthContext = createContext<{
   user: UserType | null;
   session: SessionType;
@@ -8,8 +10,6 @@ export const AuthContext = createContext<{
   signIn: (user: UserType) => void;
   signOut: () => void;
 } | null>(null);
-
-type SessionType = "loading" | "authorize" | "unauthorize";
 
 export function AuthProvider({ children }: PropsWithChildren) {
   const [user, setUser] = useState<UserType | null>(null);

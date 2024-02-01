@@ -15,8 +15,6 @@ import { ContactButton } from "@/components/main/index/contact-section/form-ui/c
 const topics = ["General", "Feedback", "Support", "Business", "Other"];
 
 export const ContactForm = () => {
-  console.log("rendering ContactForm");
-
   // React Hook Form Declarations
   const {
     register,
@@ -53,7 +51,7 @@ export const ContactForm = () => {
         onSubmit={handleSubmit(onContactFormSubmit)}
         className="mx-auto flex w-full max-w-[680px] flex-col items-center justify-center gap-8"
       >
-        {/* Name and Email Inputs */}
+        {/* Name and Email Text Inputs */}
         <div className="flex w-full flex-col items-center justify-center gap-6 sm:flex-row">
           <ContactInputWrapper className={`sm:max-w-[220px] sm:flex-shrink-0`}>
             <ContactInput
@@ -82,7 +80,7 @@ export const ContactForm = () => {
             </ContactLabel>
           </ContactInputWrapper>
         </div>
-        {/* Topic Input */}
+        {/* Topic Select Input */}
         <ContactInputWrapper className={"my-2"}>
           <ContactTopic
             onSelectionChange={(value) => {
@@ -101,7 +99,7 @@ export const ContactForm = () => {
             About
           </ContactLabel>
         </ContactInputWrapper>
-        {/* Message Input */}
+        {/* Message TextArea Input */}
         <ContactInputWrapper className={""}>
           <ContactTextField
             {...register("message")}

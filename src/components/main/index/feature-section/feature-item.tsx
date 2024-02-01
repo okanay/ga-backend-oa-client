@@ -1,4 +1,4 @@
-import { Feature } from "@/constants/features/data.ts";
+import { Feature } from "@/constants/index/features/data.ts";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 
