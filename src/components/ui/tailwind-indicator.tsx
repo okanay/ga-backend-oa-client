@@ -1,5 +1,5 @@
 export function DevModeTailwindIndicator() {
-  if (process.env.NODE_ENV === "production") return null;
+  if (import.meta.env.MODE === "production") return null;
 
   return (
     <div className="font-mono font-plex-mono fixed bottom-1 left-1 z-50 flex items-center justify-center rounded-full bg-gray-800/20 p-4 text-xs font-bold text-gray-950">
