@@ -7,6 +7,9 @@ export const ContactInput: ContactInputProps = React.forwardRef(
   ({ className, ...props }, ref) => {
     return (
       <input
+        style={{
+          WebkitAppearance: "none",
+        }}
         ref={ref as never}
         className={twMerge(
           `peer h-[44px] w-full border-b-2 border-ebony-950 bg-flower-50 px-2 text-sm text-ebony-950 transition-colors  
