@@ -4,7 +4,7 @@
     font-weight: 300;
     src: url("ibmplexserif-light-webfont.woff2") format('woff2'),
     url('ibmplexserif-light-webfont.woff') format('woff');
-    font-display: swap;
+    font-display: optional;
 
 }
 
@@ -14,7 +14,7 @@
     font-weight: 500;
     src: url("ibmplexserif-regular-webfont.woff2") format('woff2'),
     url('ibmplexserif-regular-webfont.woff') format('woff');
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -23,7 +23,7 @@
     font-weight: 700;
     src: url("ibmplexserif-medium-webfont.woff2") format('woff2'),
     url('ibmplexserif-medium-webfont.woff') format('woff');
-    font-display: swap;
+    font-display: optional;
 
 }
 
