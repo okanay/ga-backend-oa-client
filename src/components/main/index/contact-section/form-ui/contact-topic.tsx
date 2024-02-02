@@ -15,7 +15,7 @@ export const ContactTopic = React.forwardRef(
         ref={ref as never}
         placeholder={placeholder}
         className={twMerge(
-          "flex h-[44px] w-full border-b-2 border-ebony-950 px-2 text-ebony-950",
+          "flex h-[44px] w-full px-2 text-ebony-950",
           className
         )}
         {...props}

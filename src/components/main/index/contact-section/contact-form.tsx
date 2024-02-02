@@ -30,6 +30,7 @@ export const ContactForm = () => {
   // Send form data to API
   const onContactFormSubmit = async (data: ContactFormFields) => {
     const url = import.meta.env.VITE_CONTACT_API_URL;
+
     const response = await fetch(url, {
       method: "POST",
       headers: {
@@ -42,6 +43,7 @@ export const ContactForm = () => {
         message: "Something went wrong. Please try again later.",
       });
     });
+
     console.log(response);
   };
 
