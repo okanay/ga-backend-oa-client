@@ -37,7 +37,7 @@ export const Google = () => {
           <span>{letter}</span>
           <m.div
             initial={{ y: 0 }}
-            animate={{ y: "-105%", opacity: 0.75 }}
+            animate={{ y: "-108%", opacity: 0.75 }}
             transition={{
               duration: 0.75,
               delay: 0.25 + index * 0.05,
