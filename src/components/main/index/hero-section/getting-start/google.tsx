@@ -29,7 +29,9 @@ const text = [
 
 export const Google = () => {
   return (
-    <div className="font-plex-mono relative inline-flex overflow-hidden font-light text-flower-50">
+    <div
+      className={`font-plex-mono relative inline-flex overflow-hidden py-0.5 font-light text-flower-50`}
+    >
       {text.map(({ letter, color }, index) => (
         <div key={index} className={`relative`}>
           <span>{letter}</span>
@@ -41,7 +43,7 @@ export const Google = () => {
               delay: 0.25 + index * 0.05,
               ease: "easeInOut",
             }}
-            className={`absolute inset-0 h-full w-[90%] ${color} rounded`}
+            className={`absolute inset-0 h-[105%] w-[90%] ${color} rounded`}
           />
         </div>
       ))}

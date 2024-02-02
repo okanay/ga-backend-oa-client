@@ -1,38 +1,37 @@
 @font-face {
-    font-family: "Plex Sans Serif";
-    font-style: normal;
+    font-family: "IBM Plex Serif";
     font-weight: 300;
+    font-style: normal;
     src: url("ibmplexserif-light-webfont.woff2") format('woff2'),
     url('ibmplexserif-light-webfont.woff') format('woff');
-    font-display: optional;
-
+    font-display: fallback;
 }
 
 @font-face {
-    font-family: "Plex Sans Serif";
-    font-style: normal;
+    font-family: "IBM Plex Serif";
     font-weight: 500;
+    font-style: normal;
     src: url("ibmplexserif-regular-webfont.woff2") format('woff2'),
     url('ibmplexserif-regular-webfont.woff') format('woff');
-    font-display: optional;
+    font-display: fallback;
+
 }
 
 @font-face {
-    font-family: "Plex Sans Serif";
-    font-style: normal;
+    font-family: "IBM Plex Serif";
     font-weight: 700;
+    font-style: normal;
     src: url("ibmplexserif-medium-webfont.woff2") format('woff2'),
     url('ibmplexserif-medium-webfont.woff') format('woff');
-    font-display: optional;
-
+    font-display: fallback;
 }
 
-.font-plex-sans-serif {
+.font-plex-serif {
     font-family:
-            'Plex Sans Serif',
+            'IBM Plex Serif',
             "American Typewriter",
+            'Verdana',
             'Charter',
             'Georgia',
-            "STIX Two Math",
-            'sans-serif';
+            'serif';
 }
