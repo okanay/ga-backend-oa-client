@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Plex Sans Serif", "sans-serif";
+    font-family: "Plex Sans Serif";
     font-style: normal;
     font-weight: 300;
     src: url("ibmplexserif-light-webfont.woff2") format('woff2'),
@@ -18,7 +18,7 @@
 }
 
 @font-face {
-    font-family: "Plex Sans Serif", "sans-serif";
+    font-family: "Plex Sans Serif";
     font-style: normal;
     font-weight: 700;
     src: url("ibmplexserif-medium-webfont.woff2") format('woff2'),
@@ -28,5 +28,11 @@
 }
 
 .font-plex-sans-serif {
-    font-family: "Plex Sans Serif", "sans-serif";
+    font-family:
+            'Plex Sans Serif',
+            "American Typewriter",
+            'Charter',
+            'Georgia',
+            "STIX Two Math",
+            'sans-serif';
 }
