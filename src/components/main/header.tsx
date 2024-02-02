@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { handleSmoothScroll } from "@/lib/smooth-scroll.ts";
+import { MobileMenuButton } from "@/components/main/navigation/mobile-menu-button.tsx";
 
 export const Header = () => {
   return (
@@ -11,7 +12,7 @@ export const Header = () => {
               Awesome Page
             </span>
           </Link>
-          <ul className="font-plex-mono hidden items-center justify-end gap-12 text-base sm:flex">
+          <ul className="font-plex-mono hidden items-center justify-end gap-12 text-base md:flex">
             <li onClick={() => handleSmoothScroll("#price")}>
               <span className={"cursor-pointer"}>Pricing</span>
             </li>
@@ -30,6 +31,7 @@ export const Header = () => {
               </Link>
             </li>
           </ul>
+          <MobileMenuButton />
         </nav>
       </div>
     </header>
