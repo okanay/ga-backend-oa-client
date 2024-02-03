@@ -21,7 +21,7 @@ export const PriceCard: PriceCardProps = ({ scrollYProgress, isMobile }) => {
       style={{ clipPath: clipTemplate }}
     >
       <div className="flex w-full flex-col justify-between space-y-12">
-        {/*Card Top with Static Price Value*/}
+        {/*Card Top with Static Text*/}
         <div>
           <h6 className="text-base font-bold tracking-wide text-ebony-950 sm:text-lg">
             One Time
@@ -29,8 +29,10 @@ export const PriceCard: PriceCardProps = ({ scrollYProgress, isMobile }) => {
           <h5 className="-mt-1 text-xs tracking-wide text-ebony-950/50 sm:text-base">
             Per Website
           </h5>
-          <PriceValue />
         </div>
+
+        {/*Card Price Value*/}
+        <PriceValue />
 
         {/*Card Offers List */}
         <ul className="space-y-2 text-xs text-ebony-950 sm:text-sm">
