@@ -2,6 +2,7 @@ import { m, useTransform, useMotionTemplate, MotionValue } from "framer-motion";
 
 import { CheckIcon } from "./check-icon.tsx";
 import { PriceCardButton } from "@/components/main/index/price-section/price-card-btn.tsx";
+import { PriceValue } from "@/components/main/index/price-section/price-value.tsx";
 
 type PriceCardProps = React.FC<{
   scrollYProgress: MotionValue<number>;
@@ -28,9 +29,7 @@ export const PriceCard: PriceCardProps = ({ scrollYProgress, isMobile }) => {
           <h5 className="-mt-1 text-xs tracking-wide text-ebony-950/50 sm:text-base">
             Per Website
           </h5>
-          <h5 className="mt-4 text-3xl font-bold tracking-wide text-ebony-950 sm:text-4xl">
-            $20
-          </h5>
+          <PriceValue />
         </div>
 
         {/*Card Offers List */}
