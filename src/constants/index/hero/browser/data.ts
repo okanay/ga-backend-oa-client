@@ -28,7 +28,6 @@ export const dummyPages: PagesType[] = [
     url: "/everyone-favorite-pencil",
     type: "good",
   },
-
   {
     index: 3,
     favicon: "⌚︎",
