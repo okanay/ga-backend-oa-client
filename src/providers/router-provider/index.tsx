@@ -3,8 +3,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { NotFound } from "@/pages/not-found.tsx";
 import { AppLayout } from "@/pages/layout.tsx";
 
-import AdminPages from "./(admin)";
 import MainPages from "./(main)";
+import AuthenticationPages from "./(authentication)";
+import AdminPages from "./(admin)";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
-    children: [{ ...MainPages }, { ...AdminPages }],
+    children: [{ ...MainPages }, { ...AuthenticationPages }, { ...AdminPages }],
   },
 ]);
 

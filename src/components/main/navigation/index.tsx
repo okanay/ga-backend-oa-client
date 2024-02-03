@@ -10,7 +10,7 @@ export const Navigation = () => {
         <NavigationItem targetId={"#price"}>Price</NavigationItem>
         <NavigationItem targetId={"#faq"}>F.A.Q</NavigationItem>
         <NavigationItem targetId={"#contact"}>Contact</NavigationItem>
-        <NavigationItemBtn to={"/dashboard"}>Dashboard</NavigationItemBtn>
+        <NavigationItemBtn to={"/authentication"}>Dashboard</NavigationItemBtn>
       </ul>
     </nav>
   );

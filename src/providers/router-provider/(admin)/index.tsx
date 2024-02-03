@@ -1,9 +1,10 @@
-import React from "react";
+import React, { Suspense } from "react";
 
+import ProtectedRoute from "@/providers/router-provider/protected-route.tsx";
 import { RouteObject } from "react-router-dom";
 import { ErrorBoundary } from "@/pages/error.tsx";
+import { AdminLoading } from "@/pages/(admin)/loading.tsx";
 import { AdminLayout } from "@/pages/(admin)/layout.tsx";
-import ProtectedRoute from "@/providers/router-provider/protected-route.tsx";
 
 const AdminPage = React.lazy(() => import("@/pages/(admin)/page.tsx"));
 
@@ -16,7 +17,9 @@ const AdminPages: RouteObject = {
       index: true,
       element: (
         <ProtectedRoute>
-          <AdminPage />
+          <Suspense fallback={<AdminLoading />}>
+            <AdminPage />
+          </Suspense>
         </ProtectedRoute>
       ),
     },

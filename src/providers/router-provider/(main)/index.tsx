@@ -1,8 +1,9 @@
-import React from "react";
+import React, { Suspense } from "react";
 
 import { RouteObject } from "react-router-dom";
 import { ErrorBoundary } from "@/pages/error.tsx";
 import { MainLayout } from "@/pages/(main)/layout.tsx";
+import { MainLoading } from "@/pages/(main)/loading.tsx";
 
 const MainPage = React.lazy(() => import("@/pages/(main)/page.tsx"));
 
@@ -13,7 +14,11 @@ const MainPages: RouteObject = {
   children: [
     {
       index: true,
-      element: <MainPage />,
+      element: (
+        <Suspense fallback={<MainLoading />}>
+          <MainPage />
+        </Suspense>
+      ),
     },
   ],
 };
