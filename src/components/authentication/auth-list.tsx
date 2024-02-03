@@ -10,11 +10,11 @@ export const AuthList = () => {
       <li className={"flex items-center gap-4"}>
         <EasyLogin />
         <p>
-          Login with your{" "}
+          Continue with your{" "}
           <span className={"text-flower-500 underline underline-offset-4"}>
-            Google Search Console
-          </span>
-          .
+            Search Console
+          </span>{" "}
+          account.
         </p>
       </li>
       <li className={"flex items-center gap-4"}>
