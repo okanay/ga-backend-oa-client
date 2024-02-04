@@ -1,51 +1,73 @@
-export const GoogleIcon = () => {
+import { twMerge } from "tailwind-merge";
+import { Link } from "react-router-dom";
+
+interface IconsProps {
+  className?: string;
+}
+
+export const BrandLogo = ({ className }: IconsProps) => {
+  return (
+    <Link to={"/"}>
+      <img
+        src="/svgs/logo.svg"
+        alt="Google icon"
+        width="128"
+        height="128"
+        loading={"lazy"}
+        className={twMerge("size-20", className)}
+      />
+    </Link>
+  );
+};
+
+export const GoogleIcon = ({ className }: IconsProps) => {
   return (
     <img
-      src="/google.svg"
+      src="/svgs/google.svg"
       alt="Google icon"
       width="128"
       height="128"
       loading={"lazy"}
-      className={"size-5"}
+      className={twMerge("size-5", className)}
     />
   );
 };
 
-export const EasyLogin = () => {
+export const EasyLogin = ({ className }: IconsProps) => {
   return (
     <img
-      src="/easy-login.svg"
+      src="/svgs/easy-login.svg"
       alt="Google icon"
       width="128"
       height="128"
       loading={"lazy"}
-      className={"size-4"}
+      className={twMerge("size-4", className)}
     />
   );
 };
 
-export const SecureLogin = () => {
+export const SecureLogin = ({ className }: IconsProps) => {
   return (
     <img
-      src="/secure.svg"
+      src="/svgs/secure.svg"
       alt="Google icon"
       width="128"
       height="128"
       loading={"lazy"}
-      className={"size-4"}
+      className={twMerge("size-4", className)}
     />
   );
 };
 
-export const InformationLogin = () => {
+export const InformationLogin = ({ className }: IconsProps) => {
   return (
     <img
-      src="/information.svg"
+      src="/svgs/information.svg"
       alt="Google icon"
       width="128"
       height="128"
       loading={"lazy"}
-      className={"size-4"}
+      className={twMerge("size-4", className)}
     />
   );
 };

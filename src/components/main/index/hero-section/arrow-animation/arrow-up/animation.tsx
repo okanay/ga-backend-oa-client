@@ -16,7 +16,7 @@ export const ArrowUp = () => {
       }}
     >
       <img
-        src={"/arrow-up.svg"}
+        src={"/svgs/arrow-up.svg"}
         loading={"lazy"}
         alt={"hero-icon-arrow-up"}
         className={"relative opacity-85"}

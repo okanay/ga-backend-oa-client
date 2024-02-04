@@ -1,6 +1,9 @@
+import { BrandLogo } from "@/components/authentication/auth-icons.tsx";
+
 export const AuthHeader = () => {
   return (
     <div className={"flex flex-col items-center justify-center gap-4"}>
+      <BrandLogo />
       <h5 className="text-xs text-secondary-950/70 sm:text-sm">
         A faster, easier way to get started.
       </h5>
