@@ -5,7 +5,7 @@ import { NavigationItemBtn } from "@/components/main/navigation/navigation-item-
 export const Navigation = () => {
   return (
     <nav className="flex items-center justify-between px-4 py-4">
-      <NavigationTitle>Seo Buffer</NavigationTitle>
+      <NavigationTitle>Search Buffer</NavigationTitle>
       <ul className="font-plex-mono flex items-center justify-end gap-12 text-base">
         <NavigationItem targetId={"#price"}>Price</NavigationItem>
         <NavigationItem targetId={"#faq"}>F.A.Q</NavigationItem>
