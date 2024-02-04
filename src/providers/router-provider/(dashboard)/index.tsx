@@ -9,7 +9,7 @@ import { DashboardLayout } from "@/pages/(dashboard)/layout.tsx";
 const DashboardPage = React.lazy(() => import("@/pages/(dashboard)/page.tsx"));
 
 const DashboardPages: RouteObject = {
-  path: "/admin",
+  path: "/dashboard",
   element: <DashboardLayout />,
   errorElement: <ErrorBoundary />,
   children: [
