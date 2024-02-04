@@ -3,7 +3,6 @@ import { AuthList } from "@/components/authentication/auth-list.tsx";
 import { AuthHeader } from "@/components/authentication/auth-header.tsx";
 import { AuthCreateAccount } from "@/components/authentication/auth-create-account.tsx";
 import { AuthTermsPrivacy } from "@/components/authentication/auth-terms-privacy.tsx";
-import { AuthBackHome } from "@/components/authentication/auth-back-home.tsx";
 
 export const Authentication = () => {
   return (
@@ -17,7 +16,7 @@ export const Authentication = () => {
           <AuthTermsPrivacy />
         </div>
       </div>
-      <AuthBackHome />
+      {/*<AuthBackHome />*/}
     </main>
   );
 };

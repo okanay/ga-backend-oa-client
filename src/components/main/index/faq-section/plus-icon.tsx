@@ -8,7 +8,7 @@ type ImageProps = React.FC<{
 export const PlusIcon: ImageProps = ({ className, style }) => {
   return (
     <img
-      src={"/plus.svg"}
+      src={"svgs/plus.svg"}
       loading={"lazy"}
       alt={"check circle icon"}
       className={twMerge("size-[1.25rem]", className)}
