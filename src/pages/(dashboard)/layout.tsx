@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-export const AdminLayout = () => {
+export const DashboardLayout = () => {
   return (
     <div>
       <Outlet />

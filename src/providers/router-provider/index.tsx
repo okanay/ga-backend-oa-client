@@ -5,7 +5,7 @@ import { AppLayout } from "@/pages/layout.tsx";
 
 import MainPages from "./(main)";
 import AuthenticationPages from "./(authentication)";
-import AdminPages from "./(admin)";
+import DashboardPages from "./(dashboard)";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +15,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
-    children: [{ ...MainPages }, { ...AuthenticationPages }, { ...AdminPages }],
+    children: [
+      { ...MainPages },
+      { ...AuthenticationPages },
+      { ...DashboardPages },
+    ],
   },
 ]);
 

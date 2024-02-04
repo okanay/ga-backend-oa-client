@@ -3,22 +3,22 @@ import React, { Suspense } from "react";
 import ProtectedRoute from "@/providers/router-provider/protected-route.tsx";
 import { RouteObject } from "react-router-dom";
 import { ErrorBoundary } from "@/pages/error.tsx";
-import { AdminLoading } from "@/pages/(admin)/loading.tsx";
-import { AdminLayout } from "@/pages/(admin)/layout.tsx";
+import { DashboardLoading } from "@/pages/(dashboard)/loading.tsx";
+import { DashboardLayout } from "@/pages/(dashboard)/layout.tsx";
 
-const AdminPage = React.lazy(() => import("@/pages/(admin)/page.tsx"));
+const DashboardPage = React.lazy(() => import("@/pages/(dashboard)/page.tsx"));
 
-const AdminPages: RouteObject = {
+const DashboardPages: RouteObject = {
   path: "/admin",
-  element: <AdminLayout />,
+  element: <DashboardLayout />,
   errorElement: <ErrorBoundary />,
   children: [
     {
       index: true,
       element: (
         <ProtectedRoute>
-          <Suspense fallback={<AdminLoading />}>
-            <AdminPage />
+          <Suspense fallback={<DashboardLoading />}>
+            <DashboardPage />
           </Suspense>
         </ProtectedRoute>
       ),
@@ -26,4 +26,4 @@ const AdminPages: RouteObject = {
   ],
 };
 
-export default AdminPages;
+export default DashboardPages;
