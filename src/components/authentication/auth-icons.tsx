@@ -5,9 +5,13 @@ interface IconsProps {
   className?: string;
 }
 
-export const BrandLogo = ({ className }: IconsProps) => {
+interface BrandProps extends IconsProps {
+  to?: string;
+}
+
+export const BrandLogo = ({ className, to = "/" }: BrandProps) => {
   return (
-    <Link to={"/"}>
+    <Link to={to}>
       <img
         src="/svgs/logo.svg"
         alt="Google icon"
